@@ -52,9 +52,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="right-28 absolute mt-24 flex items-center">
+            <div className="right-28 absolute mt-2 flex items-center">
               <img
-                className="flex justify-center items-center h-[450px]"
+                className="flex justify-center items-center h-[650px]"
                 src="./props/board.png"
                 alt=""
               />
