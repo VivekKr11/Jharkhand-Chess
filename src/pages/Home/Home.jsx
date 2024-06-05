@@ -6,7 +6,7 @@ import Info from "../Info/Info.jsx";
 
 const OPTIONS = { align: "start" };
 const SLIDES = [
-  { content: <b >Slide 1 Content</b> },
+  { content: <b>Slide 1 Content</b> },
   { content: <b>Slide 2 Content</b> },
   { content: <b>Slide 3 Content</b> },
   { content: <b>Slide 4 Content</b> },
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <div className="bg-custom-gradient min-h-[400vh] flex flex-col justify-between">
-        <div className="relative h-screen container m-auto flex-grow">
+        <div className=" h-screen container m-auto flex-grow">
           <div className="flex justify-start w-full relative">
             <div className="flex flex-col p-3 w-1/2 h-full">
               <div className="mt-20 font-playfair -space-y-11 justify-center text-center">
@@ -41,24 +41,33 @@ const Home = () => {
                   Association
                 </p>
               </div>
+              <div className="flex justify-center">
+                <button className="bg-[#2C1B16] text-white p-3 w-60 rounded-2xl gap-1 font-bold flex justify-center  transform transition-transform duration-300 hover:scale-110 text-lg mt-6">
+                  Chess Festival-2024{" "}
+                  <img
+                    className="h-[30px]"
+                    src="./props/chesspion.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
             </div>
             <div className="right-28 absolute mt-24 flex items-center">
-              <img  className="flex justify-center items-center h-[450px]" src="./props/board.png" alt="" />
+              <img
+                className="flex justify-center items-center h-[450px]"
+                src="./props/board.png"
+                alt=""
+              />
             </div>
           </div>
-          <button className="bg-[#2C1B16] text-white p-3 w-60 rounded-2xl gap-1 font-bold flex justify-center ml-16 transform transition-transform duration-300 hover:scale-110 text-lg">
-            Chess Festival-2024{" "}
-            <img className="h-[30px]" src="./props/chesspion.svg" alt="" />
-          </button>
-          <div className="absolute right-3 top-[530px] ">
-          <EmblaCarousel  slides={SLIDES} options={OPTIONS} />
+
+          <div className=" right-5 top-[530px] ">
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
-          <div className="mt-[350px]">
-            <Info/>
+          <div className="mt-[50px]">
+            <Info />
           </div>
-          
         </div>
-       
       </div>
     </>
   );

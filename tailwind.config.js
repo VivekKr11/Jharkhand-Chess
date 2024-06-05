@@ -14,6 +14,7 @@ export default {
         'playfair': ['Playfair Display', 'serif'],
         'cinzel': ['Cinzel', 'serif'],
         'kalam': ['Kalam', 'cursive'],
+        'sanss': ['"Open Sans"', 'sans-serif'],
       },
     },
   },
