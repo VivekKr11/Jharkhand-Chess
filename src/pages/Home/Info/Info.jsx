@@ -2,7 +2,7 @@ import React from "react";
 
 const Info = () => {
   return (
-    <div className="flex justify-center gap-11">
+    <div className="flex justify-center gap-11 container m-auto">
       <div className="w-1/2">
         <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px]">
           About All Jharkhand Chess Association

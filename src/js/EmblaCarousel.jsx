@@ -46,7 +46,7 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
 
-      <div className="embla__dots">
+      {/* <div className="embla__dots">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -56,7 +56,7 @@ const EmblaCarousel = (props) => {
             )}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }
