@@ -3,21 +3,23 @@ import ReactDOM from "react-dom/client";
 import "../../css/embla.css";
 import EmblaCarousel from "../../js/EmblaCarousel.jsx";
 import Info from "./Info/Info.jsx";
+import ImageGallery from "./ImageGallery.jsx";
 
-const OPTIONS = { align: "start" };
+
+const OPTIONS = { align: "start", loop: true  };
 const SLIDES = [
-  { content: <b>Slide 1 Content</b> },
-  { content: <b>Slide 2 Content</b> },
-  { content: <b>Slide 3 Content</b> },
-  { content: <b>Slide 4 Content</b> },
-  { content: <b>Slide 5 Content</b> },
-  { content: <b>Slide 6 Content</b> },
+  { content: 'Slide 1 Content' },
+  { content: 'Slide 2 Content' },
+  { content: 'Slide 3 Content' },
+  { content: 'Slide 4 Content' },
+  { content: 'Slide 5 Content' },
+  { content: 'Slide 6 Content' },
 ];
 
 const Home = () => {
   return (
     <>
-    {/* hero section */}
+      {/* hero section */}
       <div className="bg-gradient-to-b from-[#BCADA7] via-[#FDD8B7] to-[#BA9C87] flex flex-col justify-between">
         <div className="container mx-auto flex-grow min-h-[100vh] ">
           <div className="flex justify-start w-full relative">
@@ -63,9 +65,9 @@ const Home = () => {
           </div>
 
           <div className="flex justify-end">
-          <div className="mt-10 ">
-            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-          </div>
+            <div className="mt-10 ">
+              <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+            </div>
           </div>
         </div>
       </div>
@@ -73,6 +75,9 @@ const Home = () => {
         <Info />
       </div>
       {/* Image Gallery  */}
+      <div>
+        <ImageGallery />
+      </div>
     </>
   );
 };
