@@ -4,6 +4,7 @@ import "../../css/embla.css";
 import EmblaCarousel from "../../js/EmblaCarousel.jsx";
 import Info from "./Info/Info.jsx";
 import ImageGallery from "./ImageGallery.jsx";
+import InfiniteMovingCard from "../InfiniteMovingCard.jsx";
 
 
 const OPTIONS = { align: "start", loop: true  };
@@ -78,6 +79,7 @@ const Home = () => {
       <div>
         <ImageGallery />
       </div>
+      <div><InfiniteMovingCard/></div>
     </>
   );
 };
