@@ -29,11 +29,23 @@ const ImageGallery = () => {
   }, []);
 
   return (
-    <div className="mt-16 container m-auto">
-      <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px] ">
+    <div className="bg-[] mt-16 container m-auto">
+      <div className="flex items-center gap-4 flex-row m-auto w-full justify-center">
+        <img src="/logo/horse.png" className=" w-20 h-20" alt="First Slide" />
+        <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px] ">
           Image Gallery
         </h1>
-      <div id="gallery" className="relative w-full flex justify-center mt-4" data-carousel="slide">
+        <img
+          src="/logo/horse.png"
+          className="scale-x-[-1]  w-20 h-20"
+          alt="First Slide"
+        />
+      </div>
+      <div
+        id="gallery"
+        className="relative w-full flex justify-center mt-4"
+        data-carousel="slide"
+      >
         <div className="relative h-[600px] overflow-hidden rounded-lg w-4/5 ">
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
