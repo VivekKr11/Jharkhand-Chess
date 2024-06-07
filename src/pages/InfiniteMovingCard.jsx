@@ -3,39 +3,39 @@ import React, { useEffect, useState, useRef } from "react";
 const InfiniteMovingCard = () => {
   const testimonials = [
     {
-      quote:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quibusdam magni reprehenderit, obcaecati praesentium dolorum cupiditate nostrum di",
-      name: "Lorem ipsum ",
+      quote: "Seven share lead; Meghna stuns Kunte",
+      clock: "./gotis/clock.svg",
+      name: "10 Jan - 24 Feb ",
       title: "dolorum cupiditate",
-      img : "./gotis/goti1.svg"
+      img: "./gotis/goti1.svg",
     },
     {
-      quote:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptatem ipsa dicta velit optio nemo error harum placeat nostrum ducimus tenetur ipsum delectus quod repellendus voluptas dolorem! Corrupti, tempore dolorum.",
-      name: "Lorem ipsum ",
+      quote: "Seven share lead; Meghna stuns Kunte",
+      clock: "./gotis/clock.svg",
+      name: "10 Jan - 24 Feb",
       title: "dolorum cupiditate",
-       img : "./gotis/goti2.svg"
+      img: "./gotis/goti2.svg",
     },
     {
-      quote:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum molestiae! Ducimus, eaque voluptates. Mollitia, sunt, quasi voluptatum fugit sit commodi, eos veritatis temporibus beatae a natus eligendi fugiat ex similique voluptatem.",
-      name: "Lorem ipsum ",
+      quote: "Seven share lead; Meghna stuns Kunte",
+      clock: "./gotis/clock.svg",
+      name: "10 Jan - 24 Feb ",
       title: "dolorum cupiditate",
-       img : "./gotis/goti3.svg"
+      img: "./gotis/goti3.svg",
     },
     {
-      quote:
-        "ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptatem ipsa dicta velit optio nemo error harum placeat nostrum ducimus tenetur ipsum delectus quod repellendus voluptas dolorem! Corrupti, tempore",
-      name: "Lorem ipsum ",
+      quote: "Seven share lead; Meghna stuns Kunte",
+      clock: "./gotis/clock.svg",
+      name: "10 Jan - 24 Feb ",
       title: "dolorum cupiditate",
-       img : "./gotis/goti4.svg"
+      img: "./gotis/goti4.svg",
     },
     {
-      quote:
-        "ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptatem ipsa dicta velit optio nemo error harum",
-      name: "Lorem ipsum ",
+      quote: "Seven share lead; Meghna stuns Kunte",
+      clock: "./gotis/clock.svg",
+      name: "10 Jan - 24 Feb",
       title: "dolorum cupiditate",
-       img : "./gotis/goti5.svg"
+      img: "./gotis/goti5.svg",
     },
   ];
 
@@ -46,6 +46,7 @@ const InfiniteMovingCard = () => {
         direction="right"
         speed="slow"
       />
+      <img src="" alt="" />
     </div>
   );
 };
@@ -138,21 +139,23 @@ export const InfiniteMovingCards = ({
                   {item.quote}
                 </span>
                 <div className="relative z-20 mt-6 flex flex-row items-center">
-                  <span className="flex flex-col gap-1">
+                  <span className="flex gap-1">
+                    <span className="flex items-center"><img className="h-5" src={item.clock} alt="" /></span>
                     <span className=" text-sm leading-[1.6] text-[#b9b3b0] font-semibold">
                       {item.name}
                     </span>
-                    <span className=" text-sm leading-[1.6] text-[#b9b3b0] font-semibold">
+                    {/* <span className=" text-sm leading-[1.6] text-[#b9b3b0] font-semibold">
                       {item.title}
-                    </span>
+                    </span> */}
                   </span>
                 </div>
-                <div className="absolute bottom-4 right-4"><img className="h-14" src={item.img} alt="" /></div>
+                <div className="absolute bottom-4 right-4">
+                  <img className="h-14" src={item.img} alt="" />
+                </div>
               </blockquote>
             </li>
           ))}
         </ul>
-        
       </div>
     </>
   );

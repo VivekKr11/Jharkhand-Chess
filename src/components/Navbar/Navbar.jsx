@@ -19,12 +19,12 @@ const Navbar = () => {
               <a href="#" className="text-[#2C1B16] font-bold text-lg">About Us</a>
               <a href="#" className="text-[#2C1B16] font-bold text-lg">Players</a>
               <a href="#" className="text-[#2C1B16] font-bold text-lg">Calendars</a>
-              <a href="#" className="text-[#2C1B16] font-bold text-lg">Info</a>
+              <a href="#" className="text-[#2C1B16] font-bold text-lg">Events</a>
             </div>
           </div>
           <div className="hidden md:flex items-center">
-            <button className="bg-[#E1DBD8] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#2C1B16] hover:text-[#E1DBD8] hover:bg-[#2C1B16]">
-              Registration for CHESS FESTIVAL-2024
+            <button className="bg-[#E1DBD8] p-3 rounded-xl shadow-lg font-bold cursor-pointer text-[#2C1B16] hover:text-[#E1DBD8] hover:bg-[#2C1B16] text-lg">
+             Contact Us
             </button>
           </div>
           <div className="md:hidden flex items-center">
