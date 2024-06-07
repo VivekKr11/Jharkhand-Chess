@@ -46,7 +46,7 @@ const ImageGallery = () => {
         className="relative w-full flex justify-center mt-4"
         data-carousel="slide"
       >
-        <div className="relative h-[600px] overflow-hidden rounded-lg w-4/5 ">
+        <div className="relative h-[200px] sm:h-[500px] md:h-[600px] overflow-hidden rounded-lg w-4/5 ">
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
               src="/props/first.jpg"
