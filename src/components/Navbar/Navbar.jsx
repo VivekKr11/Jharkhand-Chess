@@ -10,7 +10,7 @@ const Navbar = () => {
                         <a href="#" className="text-white font-bold text-xl"><img className="h-[50px]" src="./logo/logo.png" alt="" /></a>
                     </div>
                     
-                        <div className="flex justify-start gap-10 font-kalam">
+                        <div className="flex justify-start gap-10">
                             <a href="#" className="text-[#2C1B16] font-bold text-lg">About Us</a>
                             <a href="#" className="text-[#2C1B16] font-bold text-lg">Players</a>
                             <a href="#" className="text-[#2C1B16] font-bold text-lg">Calendars</a>
@@ -18,7 +18,7 @@ const Navbar = () => {
                         </div>
                 </div>
                 <div className="flex items-center">
-                  <button className="bg-[#E1DBD8] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#2C1B16] hover:text-[#E1DBD8] hover:bg-[#2C1B16] font-kalam">Registration for CHESS FESTIVAL-2024</button>
+                  <button className="bg-[#E1DBD8] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#2C1B16] hover:text-[#E1DBD8] hover:bg-[#2C1B16]">Registration for CHESS FESTIVAL-2024</button>
                 </div>
             </div>
         </nav>

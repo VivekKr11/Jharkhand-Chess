@@ -4,17 +4,15 @@ import "../../css/embla.css";
 import EmblaCarousel from "../../js/EmblaCarousel.jsx";
 import Info from "./Info/Info.jsx";
 import ImageGallery from "./ImageGallery.jsx";
-import InfiniteMovingCard from "../InfiniteMovingCard.jsx";
 
-
-const OPTIONS = { align: "start", loop: true  };
+const OPTIONS = { align: "start", loop: true };
 const SLIDES = [
-  { content: 'Slide 1 Content' },
-  { content: 'Slide 2 Content' },
-  { content: 'Slide 3 Content' },
-  { content: 'Slide 4 Content' },
-  { content: 'Slide 5 Content' },
-  { content: 'Slide 6 Content' },
+  { content: "Slide 1 Content" },
+  { content: "Slide 2 Content" },
+  { content: "Slide 3 Content" },
+  { content: "Slide 4 Content" },
+  { content: "Slide 5 Content" },
+  { content: "Slide 6 Content" },
 ];
 
 const Home = () => {
@@ -25,7 +23,7 @@ const Home = () => {
         <div className="container mx-auto flex-grow min-h-[100vh] ">
           <div className="flex justify-start w-full relative">
             <div className="flex flex-col p-3 w-1/2 h-full">
-              <div className="mt-20 font-playfair -space-y-11 justify-center text-center">
+              <div className="mt-20 font-playfair -space-y-11 justify-center text-left">
                 <p className="text-[80px] font-bold text-[#2C1B16]">
                   All Jharkhand
                 </p>
@@ -36,7 +34,7 @@ const Home = () => {
                   Association
                 </p>
               </div>
-              <div className="text-center">
+              <div className="text-left">
                 <p className="text-[15px] font-bold text-[#815b4f]">
                   Jharkhand Society Regn. No. 282 / 2013-14
                 </p>
@@ -56,7 +54,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="absolute right-9 -top-14 flex items-center">
+            <div className="absolute right-9 -top-16 flex items-center">
               <img
                 className="flex justify-center items-center h-[1000px]"
                 src="./props/board.png"
@@ -76,6 +74,7 @@ const Home = () => {
         <Info />
       </div>
       {/* Image Gallery  */}
+      <News />
       <div>
         <ImageGallery />
       </div>
