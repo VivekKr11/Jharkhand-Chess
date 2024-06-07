@@ -75,7 +75,6 @@ const Home = () => {
       <div className="mt-[50px] container mx-auto">
         <Info />
       </div>
-      Image Gallery 
       <News />
       <div>
         <ImageGallery />
