@@ -4,17 +4,32 @@ import "../../css/embla.css";
 import EmblaCarousel from "../../js/EmblaCarousel.jsx";
 import Info from "./Info/Info.jsx";
 import ImageGallery from "./ImageGallery.jsx";
-import News from "../../pages/Home/News/News.jsx"
+import News from "../../pages/Home/News/News.jsx";
 import InfiniteMovingCard from "../InfiniteMovingCard.jsx";
 
 const OPTIONS = { align: "start", loop: true };
 const SLIDES = [
-  { content: "Slide 1 Content" },
-  { content: "Slide 2 Content" },
-  { content: "Slide 3 Content" },
-  { content: "Slide 4 Content" },
-  { content: "Slide 5 Content" },
-  { content: "Slide 6 Content" },
+  { 
+    number: "100",
+    info : "Registered Players",
+    img: "./gotis/registered.svg",
+   },
+  { number: "100",
+    info : "Tournaments in 2018",
+    img: "./gotis/tournaments.svg",
+
+   },
+  { 
+    number: "100",
+    info : "International Masters",
+    img : "./gotis/international.svg"
+   },
+  { 
+    number: "100" ,
+    info : "FIDE Rated Players",
+     img : "./gotis/rated.svg"
+  },
+  
 ];
 
 const Home = () => {
@@ -64,7 +79,6 @@ const Home = () => {
               />
             </div>
           </div>
-
           <div className="flex justify-end">
             <div className="mt-10 ">
               <EmblaCarousel slides={SLIDES} options={OPTIONS} />
@@ -80,7 +94,10 @@ const Home = () => {
       <div>
         <ImageGallery />
       </div>
-      <div><InfiniteMovingCard/></div>
+      {/* moving card */}
+      <div>
+        <InfiniteMovingCard />
+      </div>
     </>
   );
 };

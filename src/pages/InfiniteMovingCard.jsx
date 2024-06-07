@@ -7,30 +7,35 @@ const InfiniteMovingCard = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quibusdam magni reprehenderit, obcaecati praesentium dolorum cupiditate nostrum di",
       name: "Lorem ipsum ",
       title: "dolorum cupiditate",
+      img : "./gotis/goti1.svg"
     },
     {
       quote:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptatem ipsa dicta velit optio nemo error harum placeat nostrum ducimus tenetur ipsum delectus quod repellendus voluptas dolorem! Corrupti, tempore dolorum.",
       name: "Lorem ipsum ",
       title: "dolorum cupiditate",
+       img : "./gotis/goti2.svg"
     },
     {
       quote:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, earum molestiae! Ducimus, eaque voluptates. Mollitia, sunt, quasi voluptatum fugit sit commodi, eos veritatis temporibus beatae a natus eligendi fugiat ex similique voluptatem.",
       name: "Lorem ipsum ",
       title: "dolorum cupiditate",
+       img : "./gotis/goti3.svg"
     },
     {
       quote:
         "ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptatem ipsa dicta velit optio nemo error harum placeat nostrum ducimus tenetur ipsum delectus quod repellendus voluptas dolorem! Corrupti, tempore",
       name: "Lorem ipsum ",
       title: "dolorum cupiditate",
+       img : "./gotis/goti4.svg"
     },
     {
       quote:
         "ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptatem ipsa dicta velit optio nemo error harum",
       name: "Lorem ipsum ",
       title: "dolorum cupiditate",
+       img : "./gotis/goti5.svg"
     },
   ];
 
@@ -142,7 +147,7 @@ export const InfiniteMovingCards = ({
                     </span>
                   </span>
                 </div>
-                
+                <div className="absolute bottom-4 right-4"><img className="h-14" src={item.img} alt="" /></div>
               </blockquote>
             </li>
           ))}
