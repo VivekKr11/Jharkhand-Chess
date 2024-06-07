@@ -20,45 +20,45 @@ const SLIDES = [
 const Home = () => {
   return (
     <>
-      {/* hero section */}
-      <div className="bg-gradient-to-b from-[#BCADA7] via-[#FDD8B7] to-[#BA9C87] flex flex-col justify-between">
+      
+       <div className="bg-gradient-to-b from-[#BCADA7] via-[#FDD8B7] to-[#BA9C87] flex flex-col justify-between">
         <div className="container mx-auto flex-grow min-h-[100vh] ">
-          <div className="flex justify-start w-full relative">
-            <div className="flex flex-col p-3 w-1/2 h-full">
-              <div className="mt-20 font-playfair -space-y-11 justify-center text-left">
-                <p className="text-[80px] font-bold text-[#2C1B16]">
-                  All Jharkhand
+          <div className="flex flex-col justify-start w-full relative">
+            <div className="flex flex-col p-3 md:w-1/2 h-full">
+              <div className="mt-20 md:mt-36 mb-2 md:mb-10 font-playfair justify-center md:text-left text-center">
+                <p className=" text-3xl md:text-[80px] font-bold text-[#2C1B16]">
+                  All  Jharkhand
                 </p>
-                <p className="text-[150px] font-extrabold text-[#2C1B16]">
+                <p className="text-[88px] md:text-[150px] font-extrabold text-[#2C1B16]">
                   CHESS{" "}
                 </p>
-                <p className="text-[80px] font-bold text-[#2C1B16]">
+                <p className="text-3xl md:text-[80px] font-bold text-[#2C1B16]">
                   Association
                 </p>
               </div>
-              <div className="text-left">
-                <p className="text-[15px] font-bold text-[#815b4f]">
+              <div className="text-center md:text-left mb-2 md:mb-5 ">
+                <p className="text-[15px] font-bold text-[#815b4f] tracking-tighter sm:tracking-normal ">
                   Jharkhand Society Regn. No. 282 / 2013-14
                 </p>
-                <p className="text-[15px] font-bold text-[#815b4f]">
+                <p className="text-[15px] font-bold text-[#815b4f] tracking-tighter sm:tracking-normal ">
                   An Affiliated to AICF & Recognised by Jharkhand Olympic
                   Association
                 </p>
               </div>
-              <div className="flex justify-start p-2">
-                <button className="bg-[#2C1B16] text-white p-3 w-60 rounded-2xl gap-1 font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-lg mt-6">
+              <div className="flex justify-center md:justify-start py-2">
+                <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-60 rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
                   Chess Festival-2024{" "}
                   <img
-                    className="h-[30px]"
+                    className="h-[20px] md:h-[30px]"
                     src="./props/chesspion.svg"
                     alt=""
                   />
                 </button>
               </div>
             </div>
-            <div className="absolute right-9 -top-16 flex items-center">
+            <div className="md:absolute right-9 -top-16 flex items-center">
               <img
-                className="flex justify-center items-center h-[1000px]"
+                className="flex justify-center items-center md:h-[1000px]"
                 src="./props/board.png"
                 alt=""
               />
@@ -75,7 +75,7 @@ const Home = () => {
       <div className="mt-[50px] container mx-auto">
         <Info />
       </div>
-      {/* Image Gallery  */}
+      Image Gallery 
       <News />
       <div>
         <ImageGallery />
