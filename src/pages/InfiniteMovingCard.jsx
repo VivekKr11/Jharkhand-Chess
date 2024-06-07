@@ -112,7 +112,7 @@ export const InfiniteMovingCards = ({
 
   return (
     <>
-      <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px] ">
+      <h1 className=" md:mt-2 font-cinzel font-bold flex justify-center text-[32px] md:text-[60px] text-[#2C1B16]  text-center leading-[60px] ">
         Announcement
       </h1>
       <div

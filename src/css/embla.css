@@ -1,7 +1,7 @@
 .embla {
   max-width: 70rem;
   margin: auto;
-  --slide-height: 10rem;
+  /* --slide-height: 10rem; */
   --slide-spacing: 1rem;
   --slide-size: 100%;
   --slide-spacing-sm: 1.6rem;
@@ -17,7 +17,7 @@
 }
 
 .embla__container {
-
+max-width: 100vw !important;
   /* backface-visibility: hidden; */
   display: flex;
   touch-action: pan-y pinch-zoom;

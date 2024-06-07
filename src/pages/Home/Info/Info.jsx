@@ -4,10 +4,10 @@ const Info = () => {
   return (
     <div className="flex md:flex-row flex-col justify-center gap-11 container m-auto">
       <div className="w-full md:w-1/2">
-        <h1 className="font-cinzel font-bold flex justify-center text-4xl md:text-[60px] text-[#2C1B16]  text-center md:leading-[60px]">
+        <h1 className="font-cinzel font-bold flex justify-center text-2xl md:text-[60px] text-[#2C1B16]  text-center md:leading-[60px]">
           About All Jharkhand Chess Association
         </h1>
-        <p className="font-sans text-md md:text-xl p-4 text-[#58362b] text-justify md:text-center md:leading-[24px] mt-4">
+        <p className="font-sans text-md md:text-xl p-4 text-[#58362b] text-justify md:text-center md:leading-[24px] md:mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
           soluta assumenda aut, quibusdam quisquam ad consequuntur reprehenderit
           rem eum. In aliquid distinctio, dolorem molestiae quod harum

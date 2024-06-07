@@ -31,13 +31,13 @@ const ImageGallery = () => {
   return (
     <div className="bg-[] mt-16 container m-auto">
       <div className="flex items-center gap-4 flex-row m-auto w-full justify-center">
-        <img src="/logo/horse.png" className=" w-20 h-20" alt="First Slide" />
-        <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px] ">
+        <img src="/logo/horse.png" className="h-[60px] md:h-[100px] " alt="First Slide" />
+        <h1 className="font-cinzel font-bold flex justify-center text-[30px] md:text-[60px] text-[#2C1B16]  text-center leading-tight md:leading-[60px] ">
           Image Gallery
         </h1>
         <img
           src="/logo/horse.png"
-          className="scale-x-[-1]  w-20 h-20"
+          className="scale-x-[-1]  h-[60px] md:h-[100px] "
           alt="First Slide"
         />
       </div>
