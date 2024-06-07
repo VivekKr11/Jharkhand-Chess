@@ -79,8 +79,8 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="flex justify-end">
-            <div className="mt-10 ">
+          <div className="container flex justify-center  md:justify-end">
+            <div className= "">
               <EmblaCarousel slides={SLIDES} options={OPTIONS} />
             </div>
           </div>

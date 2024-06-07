@@ -39,11 +39,11 @@ const EmblaCarousel = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
-            <div className="embla__slide cursor-pointer" key={index}>
-              <div className="embla__slide__number text-[#2C1B16] font-playfair  flex justify-around   ">
-                <div><img className="h-[70px] -mt-3" src={slide.img} alt="" /></div>
-                <div><div className="text-5xl font-bold -mt-3">{slide.number}</div>
-                <div className="text-2xl font-semibold">{slide.info}</div></div>  
+            <div className="embla__slide cursor-pointer w-auto" key={index}>
+              <div className="embla__slide__number text-[#2C1B16] font-playfair  flex justify-between gap-0 md:gap-1 w-[300px] md:w-[500px]">
+                <div><img className="h-[55px] md:h-[70px] -mt-3" src={slide.img} alt="" /></div>
+                <div><div className="text-3xl md:text-5xl font-bold -mt-3">{slide.number}</div>
+                <div className="text-xl md:text-2xl font-semibold">{slide.info}</div></div>  
               </div>
             </div>
           ))}
