@@ -2,12 +2,12 @@ import React from "react";
 
 const Info = () => {
   return (
-    <div className="flex justify-center gap-11 container m-auto">
-      <div className="w-1/2">
-        <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px]">
+    <div className="flex md:flex-row flex-col justify-center gap-11 container m-auto">
+      <div className="w-full md:w-1/2">
+        <h1 className="font-cinzel font-bold flex justify-center text-4xl md:text-[60px] text-[#2C1B16]  text-center md:leading-[60px]">
           About All Jharkhand Chess Association
         </h1>
-        <p className="font-sanss text-xl p-3 text-[#58362b] text-center leading-[24px] mt-4">
+        <p className="font-sans text-md md:text-xl p-4 text-[#58362b] text-justify md:text-center md:leading-[24px] mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
           soluta assumenda aut, quibusdam quisquam ad consequuntur reprehenderit
           rem eum. In aliquid distinctio, dolorem molestiae quod harum
@@ -26,8 +26,8 @@ const Info = () => {
           </p>
         </p>
       </div>
-      <div className="w-2/5 flex justify-center items-center">
-        <img className="h-[400px]" src="./props/board2.png" alt="" />
+      <div className="w-full md:w-2/5 flex justify-center items-center">
+        <img className="md:h-[400px]" src="./props/board2.png" alt="" />
       </div>
     </div>
   );

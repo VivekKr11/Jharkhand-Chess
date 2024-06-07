@@ -18,7 +18,7 @@ export default function News() {
       <div className="flex items-center gap-4 flex-row m-auto w-full justify-center mt-20 ">
         <img src="/logo/horse.png" className=" w-20 h-20" alt="First Slide" />
         <h1 className="font-cinzel font-bold flex justify-center text-[60px] text-[#2C1B16]  text-center leading-[60px] ">
-        FEATURED EVENTS
+          FEATURED EVENTS
         </h1>
         <img
           src="/logo/horse.png"
@@ -33,10 +33,38 @@ export default function News() {
           loop={true}
           navigation={true}
           modules={[Pagination, Navigation]}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl " style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}>
+            <div
+              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              style={{
+                boxShadow:
+                  "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+              }}
+            >
               <a href="#">
                 <img
                   className="rounded-t-lg w-full "
@@ -47,11 +75,12 @@ export default function News() {
               <div className="p-5">
                 <a href="#">
                   <h5 className="mb-2 text-xl font-bold tracking-tight text-[#2C1B16]">
-                  State Open Champion for 2018, Ranchi
+                    State Open Champion for 2018, Ranchi
                   </h5>
                 </a>
                 <p className="mb-3 text-sm font-normal text-[#2C1B16] ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus lacinia leo et iaculis. Fusce.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  luctus lacinia leo et iaculis. Fusce.
                 </p>
                 <a
                   href="#"
@@ -78,22 +107,26 @@ export default function News() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl " style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}>
+            <div
+              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              style={{
+                boxShadow:
+                  "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+              }}
+            >
               <a href="#">
-                <img
-                  className="rounded-t-lg w-full"
-                  src="/News/2.jpg"
-                  alt=""
-                />
+                <img className="rounded-t-lg w-full" src="/News/2.jpg" alt="" />
               </a>
               <div className="p-5">
                 <a href="#">
                   <h5 className="mb-2 text-xl font-bold tracking-tight text-[#2C1B16]">
-                  The champions of 32nd National under-9 : Sneha Halder and Ilamparthi A R,Ranchi
+                    The champions of 32nd National under-9 : Sneha Halder and
+                    Ilamparthi A R,Ranchi
                   </h5>
                 </a>
                 <p className="mb-3 text-sm font-normal text-[#2C1B16] ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus lacinia leo et iaculis. Fusce.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  luctus lacinia leo et iaculis. Fusce.
                 </p>
                 <a
                   href="#"
@@ -120,22 +153,26 @@ export default function News() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl " style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}>
+            <div
+              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              style={{
+                boxShadow:
+                  "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+              }}
+            >
               <a href="#">
-                <img
-                  className="rounded-t-lg w-full"
-                  src="/News/3.jpg"
-                  alt=""
-                />
+                <img className="rounded-t-lg w-full" src="/News/3.jpg" alt="" />
               </a>
               <div className="p-5">
                 <a href="#">
                   <h5 className="mb-2 text-xl font-bold tracking-tight text-[#2C1B16]">
-                  Arpan Das wins 2nd Dalmia Cements All India Open FIDE Rating Chess Tournament 2018
+                    Arpan Das wins 2nd Dalmia Cements All India Open FIDE Rating
+                    Chess Tournament 2018
                   </h5>
                 </a>
                 <p className="mb-3 text-sm font-normal text-[#2C1B16] ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus lacinia leo et iaculis. Fusce.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  luctus lacinia leo et iaculis. Fusce.
                 </p>
                 <a
                   href="#"
@@ -162,22 +199,25 @@ export default function News() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl " style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}>
+            <div
+              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              style={{
+                boxShadow:
+                  "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+              }}
+            >
               <a href="#">
-                <img
-                  className="rounded-t-lg w-full"
-                  src="/News/4.jpg"
-                  alt=""
-                />
+                <img className="rounded-t-lg w-full" src="/News/4.jpg" alt="" />
               </a>
               <div className="p-5">
                 <a href="#">
                   <h5 className="mb-2 text-xl font-bold tracking-tight text-[#2C1B16]">
-                  3rd Jharkhand State Blitz Chess Championship 2023
+                    3rd Jharkhand State Blitz Chess Championship 2023
                   </h5>
                 </a>
                 <p className="mb-3 text-sm font-normal text-[#2C1B16] ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus lacinia leo et iaculis. Fusce.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  luctus lacinia leo et iaculis. Fusce.
                 </p>
                 <a
                   href="#"
@@ -203,7 +243,6 @@ export default function News() {
               </div>
             </div>
           </SwiperSlide>
-          
         </Swiper>
       </div>
     </>

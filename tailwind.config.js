@@ -14,6 +14,7 @@ export default {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to top, #c79081 0%, #dfa579 100%);',
+        
       },
       fontFamily: {
         'mukta': ['Mukta', 'sans-serif'],
