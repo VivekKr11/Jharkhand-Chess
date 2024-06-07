@@ -86,7 +86,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-[50px] container mx-auto">
+      <div className="mt-[20px] md:mt-[50px] container mx-auto">
         <Info />
       </div>
       <News />
