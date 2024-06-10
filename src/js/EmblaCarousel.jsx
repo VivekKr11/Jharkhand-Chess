@@ -42,7 +42,7 @@ const EmblaCarousel = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
-            <div className="embla__slide cursor-pointer w-auto" key={index}>
+            <div className="embla__slide cursor-pointer " key={index}>
               <div className="embla__slide__number text-[#2C1B16] font-playfair  flex md:justify-between gap-2 md:gap-1 w-[300px] md:w-[500px] h-[7rem] md:h-[10rem]">
                 <div>
                   <img

@@ -38,7 +38,7 @@ const Home = () => {
       
        <div className="bg-gradient-to-b from-[#BCADA7] via-[#FDD8B7] to-[#BA9C87] flex flex-col justify-between">
         <div className="container mx-auto flex-grow min-h-[100vh] ">
-          <div className="flex flex-col justify-start w-full relative">
+          <div className="flex flex-col justify-start md:w-full relative">
             <div className="flex flex-col p-3 md:w-1/2 h-full">
               <div className="mt-20 md:mt-36 mb-2 md:mb-10 font-playfair justify-center md:text-left text-center">
                 <p className=" text-3xl md:text-[80px] font-bold text-[#2C1B16]">
