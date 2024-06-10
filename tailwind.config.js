@@ -22,6 +22,7 @@ export default {
         'cinzel': ['Cinzel', 'serif'],
         'kalam': ['Kalam', 'cursive'],
         'sanss': ['"Open Sans"', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       animation: {
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

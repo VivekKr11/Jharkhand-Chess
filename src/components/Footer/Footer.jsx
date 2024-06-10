@@ -19,7 +19,7 @@ const Footer = () => {
                 AJCA
               </span>
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-[#2C1B16] sm:mb-0 ">
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-[#2C1B16] sm:mb-0 justify-around">
               <li>
                 <a href="#" className="hover:underline me-4 md:me-6">
                   About
@@ -44,19 +44,19 @@ const Footer = () => {
           </div>
           <hr className="my-6 border-[#2C1B16] sm:mx-auto  lg:my-8" />
           <div className="flex justify-center">
-            <div className="flex w-1/2 justify-around">
-              <img src="./logo/footerLogo1.png" alt="" />
-              <img src="./logo/footerLogo2.png" alt="" />
-              <img src="./logo/footerLogo3.png" alt="" />
-              <img src="./logo/footerLogo4.png" alt="" />
-              <img src="./logo/footerLogo5.png" alt="" />
+            <div className="flex md:w-1/2 md:justify-around justify-around">
+              <img className="h-[45px] md:h-[75px]" src="./logo/footerLogo1.png" alt="" />
+              <img className="h-[45px]  md:h-[75px]" src="./logo/footerLogo2.png" alt="" />
+              <img className="h-[45px]  md:h-[75px]" src="./logo/footerLogo3.png" alt="" />
+              <img className="h-[45px]  md:h-[75px]" src="./logo/footerLogo4.png" alt="" />
+              <img className="h-[45px]  md:h-[75px]" src="./logo/footerLogo5.png" alt="" />
             </div>
           </div>
           
         </div>
        
       </footer>
-      <div className="w-full bg-[#2C1B16] text-[#E1DBD8] flex justify-center font-semibold text-xl p-2" ><p>© pyxisblu.com. All rights reserved.</p></div>
+      <div className="w-full bg-[#2C1B16] text-[#E1DBD8] flex justify-center font-semibold md:text-xl p-2 text-center" ><p>© pyxisblu.com. All rights reserved.</p></div>
     </div>
   );
 };
