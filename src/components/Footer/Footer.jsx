@@ -43,32 +43,23 @@ const Footer = () => {
             </ul>
           </div>
           <hr className="my-6 border-[#2C1B16] sm:mx-auto  lg:my-8" />
-          <div className="flex justify-between">
-          <div className="flex gap-4">
-            <img src="./logo/footerLogo1.png" alt="" />
-            <img src="./logo/footerLogo2.png" alt="" />
-            <img src="./logo/footerLogo3.png" alt="" />
-            <img src="./logo/footerLogo4.png" alt="" />
-            <img src="./logo/footerLogo5.png" alt="" />
-          </div>
-          <div className="flex justify-end">
-            <div className="flex flex-row justify-end items-center ">
-              <img
-                src="https://www.pyxisblu.com/images/logo/PyxisNameLogo1.svg"
-                className="h-20"
-                alt="PyxisBlu Logo"
-              />
-              <span className="block text-sm text-[#2C1B16] sm:text-center ">
-                <a href="https://flowbite.com/" className="hover:underline"></a>
-                © pyxisblu.com. All rights reserved.
-              </span>
+          <div className="flex justify-center">
+            <div className="flex w-1/2 justify-around">
+              <img src="./logo/footerLogo1.png" alt="" />
+              <img src="./logo/footerLogo2.png" alt="" />
+              <img src="./logo/footerLogo3.png" alt="" />
+              <img src="./logo/footerLogo4.png" alt="" />
+              <img src="./logo/footerLogo5.png" alt="" />
             </div>
           </div>
-          </div>
+          
         </div>
+       
       </footer>
+      <div className="w-full bg-[#2C1B16] text-[#E1DBD8] flex justify-center font-semibold text-xl p-2" ><p>© pyxisblu.com. All rights reserved.</p></div>
     </div>
   );
 };
 
 export default Footer;
+
