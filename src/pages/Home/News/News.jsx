@@ -59,12 +59,16 @@ export default function News() {
         >
           <SwiperSlide>
             <div
-              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              className="max-w-sm relative bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
               style={{
                 boxShadow:
                   "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
               }}
-            >
+            ><div className="absolute items-center px-6 py-2 text-sm font-medium text-center text-[#2C1B16] shadow-xl bg-[#F8F4E1] rounded-l-lg right-0 top-5 "
+                >
+                  24/07/2024
+                  
+                </div>
               <a href="#">
                 <img
                   className="rounded-t-lg w-full "
@@ -108,12 +112,17 @@ export default function News() {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              className="max-w-sm relative bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
               style={{
                 boxShadow:
                   "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
               }}
             >
+            <div className="absolute items-center px-6 py-2 text-sm font-medium text-center text-[#2C1B16] shadow-xl bg-[#F8F4E1] rounded-l-lg right-0 top-5 "
+                >
+                  24/07/2024
+                  
+                </div>
               <a href="#">
                 <img className="rounded-t-lg w-full" src="/News/2.jpg" alt="" />
               </a>
@@ -154,12 +163,16 @@ export default function News() {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              className="max-w-sm relative bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
               style={{
                 boxShadow:
                   "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
               }}
-            >
+            ><div className="absolute items-center px-6 py-2 text-sm font-medium text-center text-[#2C1B16] shadow-xl bg-[#F8F4E1] rounded-l-lg right-0 top-5 "
+                >
+                  24/07/2024
+                  
+                </div>
               <a href="#">
                 <img className="rounded-t-lg w-full" src="/News/3.jpg" alt="" />
               </a>
@@ -200,12 +213,17 @@ export default function News() {
           </SwiperSlide>
           <SwiperSlide>
             <div
-              className="max-w-sm bg-[#F8F4E1] h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
+              className="max-w-sm bg-[#F8F4E1] relative h-[460px] flex items-center justify-between flex-col border m-4 rounded-lg shadow-xl "
               style={{
                 boxShadow:
                   "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
               }}
             >
+            <div className="absolute items-center px-6 py-2 text-sm font-medium text-center text-[#2C1B16] shadow-xl bg-[#F8F4E1] rounded-l-lg right-0 top-5 "
+                >
+                  24/07/2024
+                  
+                </div>
               <a href="#">
                 <img className="rounded-t-lg w-full" src="/News/4.jpg" alt="" />
               </a>

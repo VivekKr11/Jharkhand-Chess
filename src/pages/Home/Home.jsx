@@ -78,14 +78,14 @@ const Home = () => {
                 </p>
               </div>
               <div className="flex justify-center md:justify-start py-2">
-                <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-60 rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
+                <a href="/registrationForm"><button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-60 rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
                   Chess Festival-2024{" "}
                   <img
                     className="h-[20px] md:h-[30px]"
                     src="./props/chesspion.svg"
                     alt=""
                   />
-                </button>
+                </button></a>
               </div>
             </div>
             <div className="md:absolute right-9 -top-16 flex items-center">
@@ -107,22 +107,23 @@ const Home = () => {
     Latest News
   </div>
   <div id="Headline-div" className="overflow-x-hidden custom-gradient py-0 md:py-2 flex-1">
-    <Marquee className="py-2" pauseOnHover="pause" speed={100}>
-      {Array.isArray(data) &&
-        data.map((item, index) => (
-          <span
-            key={index}
-            className="md:text-lg text-xs mx-6 text-yellow-900 font-bold inline-block ml-5"
-          >
-            <img
-              src="/star.svg"
-              alt="Star"
-              className="inline-block md:w-6 md:h-6 w-4 h-4 mr-2"
-            />
-            {item.description}
-          </span>
-        ))}
-    </Marquee>
+    <Marquee className="py-2" pauseOnHover={true} speed={100}>
+  {Array.isArray(data) &&
+    data.map((item, index) => (
+      <span
+        key={index}
+        className="md:text-lg text-xs mx-6 text-yellow-900 font-bold inline-block ml-5"
+      >
+        <img
+          src="/star.svg"
+          alt="Star"
+          className="inline-block md:w-6 md:h-6 w-4 h-4 mr-2"
+        />
+        {item.description}
+      </span>
+    ))}
+</Marquee>
+
   </div>
 </div>
 

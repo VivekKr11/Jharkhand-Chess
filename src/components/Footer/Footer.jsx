@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
        
       </footer>
-      <div className="w-full bg-[#2C1B16] text-[#E1DBD8] flex justify-center font-semibold md:text-xl p-2 text-center" ><p>© pyxisblu.com. All rights reserved.</p></div>
+      <div className="w-full bg-[#2C1B16] text-[#E1DBD8] flex justify-center font-semibold  text-[14px] p-2 text-center" ><p>© Copyright 2024  PyxisBlu. All rights reserved.</p></div>
     </div>
   );
 };
