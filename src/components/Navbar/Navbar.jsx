@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,10 @@ const Navbar = () => {
               <img className="h-[50px]" src="./logo/logo.png" alt="" />
             </a>
             <div className="hidden md:flex justify-start gap-10">
-              <a href="#" className="text-[#2C1B16] font-bold text-lg">About Us</a>
-              <a href="#" className="text-[#2C1B16] font-bold text-lg">Players</a>
-              <a href="#" className="text-[#2C1B16] font-bold text-lg">Calendars</a>
-              <a href="#" className="text-[#2C1B16] font-bold text-lg">Events</a>
+              <Link to="/" className="text-[#2C1B16] font-bold text-lg">About Us</Link>
+              <Link to="/playerlist" className="text-[#2C1B16] font-bold text-lg">Players</Link>
+              <Link to="/" className="text-[#2C1B16] font-bold text-lg">Calendars</Link>
+              <Link to="/" className="text-[#2C1B16] font-bold text-lg">Events</Link>
             </div>
           </div>
           <div className="hidden md:flex items-center">

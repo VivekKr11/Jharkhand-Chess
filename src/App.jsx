@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import TermsAndCondition from "./pages/TermsAndCondition";
 import RegistrationForm from "./pages/RegistrationForm";
+import PlayerList from "./pages/PlayerList";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/termsAndCondition" element= {<TermsAndCondition/>} />
         <Route path="/registrationform" element= {<RegistrationForm/>} />
+        <Route path="/playerlist" element= {<PlayerList/>} />
       </Routes>
       <Footer/>
     </>
