@@ -66,7 +66,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="flex justify-center md:justify-start gap-10 py-2">
-                <a to="https://jharkhandchess.in/srstate.aspx" target="_blank">
+                <a href="https://jharkhandchess.in/srstate.aspx" target="_blank">
                   <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-60 rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
                     Chess Festival-2025
                     <img
