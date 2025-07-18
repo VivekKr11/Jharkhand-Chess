@@ -76,7 +76,9 @@ const Home = () => {
                     />
                   </button>
                 </Link>
-                <a href="/pdf/23rd-Jharkhand-State-FIDE-Rating-Chess-Championship-2024.pdf" target="_blank">
+                <a
+                  href="https://jharkhandchess.in/pdf/24th-Jharkhand-State-FIDE-Rating-Chess-Championship-2025.pdf"
+                  target="_blank">
                   <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-fit rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
                     Brochure
                     <img
@@ -109,14 +111,12 @@ const Home = () => {
             </div>
             <div
               id="Headline-div"
-              className="overflow-x-hidden custom-gradient py-0 md:py-2 flex-1"
-            >
+              className="overflow-x-hidden custom-gradient py-0 md:py-2 flex-1">
               <Marquee className="py-2" pauseOnHover={true} speed={100}>
                 {data.map((item, index) => (
                   <span
                     key={index}
-                    className="md:text-lg text-xs mx-6 text-yellow-900 font-bold inline-block ml-5"
-                  >
+                    className="md:text-lg text-xs mx-6 text-yellow-900 font-bold inline-block ml-5">
                     <img
                       src="/star.svg"
                       alt="Star"

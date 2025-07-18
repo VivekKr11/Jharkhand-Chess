@@ -55,6 +55,7 @@ const Navbar = () => {
         },
         {
           text: "Players List",
+          target: "_blank",
           link: "https://jharkhandchess.in/RegPlayersFor.aspx",
         },
       ],
@@ -68,42 +69,51 @@ const Navbar = () => {
           <Link to="/" className="text-white font-bold text-xl">
             <img className="h-[50px]" src="./logo/logo.png" alt="Logo" />
           </Link>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex justify-start gap-10">
             {desktopDropdownItems.map((dropdown) => (
               <div key={dropdown.title} className="relative group">
                 <button className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors flex items-center gap-1">
                   {dropdown.title}
-                  <svg 
-                    className={`w-4 h-4 transition-transform duration-200 group-hover:rotate-180 ${activeDropdown === dropdown.title ? 'rotate-180' : ''}`}
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth="2" 
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 group-hover:rotate-180 ${
+                      activeDropdown === dropdown.title ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </button>
                 <div className="absolute hidden group-hover:block top-full left-0 bg-[#E1DBD8] min-w-[280px] rounded-xl shadow-lg py-3 space-y-2 transition-all duration-300 origin-top transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 -translate-y-2">
-                  {dropdown.items.map((item) => (
-                    <Link
-                      key={item.text}
-                      to={item.link}
-                      className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
-                    >
-                      {item.text}
-                    </Link>
-                  ))}
+                  {dropdown.items.map((item) =>
+                    item?.target === "_blank" ? (
+                      <a
+                        key={item.text}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150">
+                        {item.text}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.text}
+                        to={item.link}
+                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150">
+                        {item.text}
+                      </Link>
+                    )
+                  )}
                 </div>
               </div>
             ))}
-            
-            
           </div>
         </div>
 
@@ -116,15 +126,18 @@ const Navbar = () => {
 
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden flex items-center">
-          <button 
+          <button
             onClick={toggleMenu}
-            className="text-[#2C1B16] focus:outline-none transition-transform duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
+            className="text-[#2C1B16] focus:outline-none transition-transform duration-300">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
               />
             </svg>
@@ -139,45 +152,48 @@ const Navbar = () => {
             <div key={dropdown.title} className="mb-4">
               <button
                 onClick={() => toggleDropdown(dropdown.title)}
-                className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center"
-              >
+                className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center">
                 {dropdown.title}
-                <svg 
-                  className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === dropdown.title ? 'rotate-180' : ''}`}
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    activeDropdown === dropdown.title ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
               </button>
               {activeDropdown === dropdown.title && (
                 <div className="ml-3 space-y-2 border-l-2 border-[#2C1B16] pl-3 transition-all duration-300 ease-in-out">
-                  {dropdown.items.map((item) => (
-                    <Link
-                      key={item.text}
-                      to={item.link}
-                      className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
-                    >
-                      {item.text}
-                    </Link>
-                  ))}
+                  {dropdown.items.map((item) =>
+                    item?.target === "_blank" ? (
+                      <a
+                        key={item.text}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200">
+                        {item.text}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.text}
+                        to={item.link}
+                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200">
+                        {item.text}
+                      </Link>
+                    )
+                  )}
                 </div>
               )}
             </div>
           ))}
-          {/* Standalone Tournament Entry in Mobile */}
-          <Link
-            to="#"
-            className="block text-[#2C1B16] font-bold text-lg py-2 hover:pl-2 transition-all duration-200"
-          >
-            Tournament Entry
-          </Link>
           <button className="w-full mt-4 bg-[#2C1B16] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#E1DBD8] hover:bg-[#3a2a24] transition-colors duration-300">
             Contact Us
           </button>
