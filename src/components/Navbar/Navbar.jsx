@@ -21,7 +21,7 @@ const Navbar = () => {
         { text: "Players List (2025–26)", link: "#" },
         { text: "Payment for T-shirt (For National)", link: "#" },
         { text: "Other Payment", link: "#" },
-      ]
+      ],
     },
     {
       title: "Calendar",
@@ -29,7 +29,7 @@ const Navbar = () => {
         { text: "AJCA 2025", link: "#" },
         { text: "AJCA 2024", link: "#" },
         { text: "AJCA 2023", link: "#" },
-      ]
+      ],
     },
     {
       title: "Information",
@@ -40,8 +40,25 @@ const Navbar = () => {
         { text: "Arbiters", link: "#" },
         { text: "Coaches", link: "#" },
         { text: "Download", link: "#" },
-      ]
-    }
+      ],
+    },
+    {
+      title: "Tournament Entry",
+      items: [
+        {
+          text: "Brochure",
+          link: "https://jharkhandchess.in/pdf/24th-Jharkhand-State-FIDE-Rating-Chess-Championship-2025.pdf",
+        },
+        {
+          text: "Registration for State Championship",
+          link: "https://jharkhandchess.in/srstate.aspx",
+        },
+        {
+          text: "Players List",
+          link: "https://jharkhandchess.in/RegPlayersFor.aspx",
+        },
+      ],
+    },
   ];
 
   return (
@@ -86,12 +103,7 @@ const Navbar = () => {
               </div>
             ))}
             
-            <Link 
-              to="#" 
-              className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors"
-            >
-              Tournament Entry
-            </Link>
+            
           </div>
         </div>
 
