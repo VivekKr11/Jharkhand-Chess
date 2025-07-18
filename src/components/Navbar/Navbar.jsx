@@ -47,10 +47,12 @@ const Navbar = () => {
       items: [
         {
           text: "Brochure",
+          target: "_blank",
           link: "https://jharkhandchess.in/pdf/24th-Jharkhand-State-FIDE-Rating-Chess-Championship-2025.pdf",
         },
         {
           text: "Registration for State Championship",
+          target: "_blank",
           link: "https://jharkhandchess.in/srstate.aspx",
         },
         {
