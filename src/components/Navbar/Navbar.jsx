@@ -48,18 +48,14 @@ const Navbar = () => {
         {
           text: "Brochure",
           target: "_blank",
-          link: "https://jharkhandchess.in/pdf/24th-Jharkhand-State-FIDE-Rating-Chess-Championship-2025.pdf",
+          link: "https://jharkhandchess.in/pdf/national-rapid-and-blitz-2026.pdf",
         },
         {
-          text: "Registration for State Championship",
+          text: "Accomodation/Food/Travel (Rapid & Blitz Chess Championship)",
           target: "_blank",
-          link: "https://jharkhandchess.in/srstate.aspx",
+          link: "https://jharkhandchess.in/registration.aspx",
         },
-        {
-          text: "Players List",
-          target: "_blank",
-          link: "https://jharkhandchess.in/RegPlayersFor.aspx",
-        },
+        
       ],
     },
   ];

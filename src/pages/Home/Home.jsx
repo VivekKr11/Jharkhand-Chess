@@ -66,9 +66,9 @@ const Home = () => {
                 </p>
               </div>
               <div className="flex justify-center md:justify-start gap-10 py-2">
-                <a href="https://jharkhandchess.in/srstate.aspx" target="_blank">
-                  <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-60 rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
-                    Chess Festival-2025
+                <a href="https://jharkhandchess.in/registration.aspx" target="_blank">
+                  <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-72 rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
+                     Chess Championship 2026
                     <img
                       className="h-[20px] md:h-[30px]"
                       src="./props/chesspion.svg"
@@ -77,7 +77,7 @@ const Home = () => {
                   </button>
                 </a>
                 <a
-                  href="https://jharkhandchess.in/pdf/24th-Jharkhand-State-FIDE-Rating-Chess-Championship-2025.pdf"
+                  href="https://jharkhandchess.in/pdf/national-rapid-and-blitz-2026.pdf"
                   target="_blank">
                   <button className="bg-[#2C1B16] text-white md:p-3 p-2 px-2 md:w-fit rounded-md md:rounded-2xl gap-1 md:font-bold flex justify-start transform transition-transform duration-300 hover:scale-110 text-sm md:text-lg  md:mt-6">
                     Brochure
