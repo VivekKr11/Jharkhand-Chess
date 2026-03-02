@@ -55,7 +55,6 @@ const Navbar = () => {
           target: "_blank",
           link: "https://jharkhandchess.in/registration.aspx",
         },
-        
       ],
     },
   ];
@@ -69,7 +68,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex justify-start gap-10">
+          <div className="hidden md:flex justify-start gap-10 items-center">
             {desktopDropdownItems.map((dropdown) => (
               <div key={dropdown.title} className="relative group">
                 <button className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors flex items-center gap-1">
@@ -112,6 +111,15 @@ const Navbar = () => {
                 </div>
               </div>
             ))}
+
+            {/* AJCA T-shirt standalone link */}
+            <a
+              href="https://jharkhandchess.in/ajcatshirt.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors">
+              AJCA T-shirt Order
+            </a>
           </div>
         </div>
 
@@ -192,6 +200,30 @@ const Navbar = () => {
               )}
             </div>
           ))}
+
+          {/* AJCA T-shirt standalone link for mobile */}
+          <div className="mb-4">
+            <a
+              href="https://jharkhandchess.in/ajcatshirt.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center hover:pl-2 transition-all duration-200">
+              AJCA T-shirt Order
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+
           <button className="w-full mt-4 bg-[#2C1B16] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#E1DBD8] hover:bg-[#3a2a24] transition-colors duration-300">
             Contact Us
           </button>
