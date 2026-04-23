@@ -40,6 +40,7 @@ const Navbar = () => {
         { text: "Arbiters", link: "#" },
         { text: "Coaches", link: "#" },
         { text: "Download", link: "#" },
+        { text: "Certificates", link: "/certificates" },
       ],
     },
     {
