@@ -49,12 +49,12 @@ const Navbar = () => {
         {
           text: "Brochure",
           target: "_blank",
-          link: "https://jharkhandchess.in/pdf/national-rapid-and-blitz-2026.pdf",
+          link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
         },
         {
-          text: "Accomodation/Food/Travel (Rapid & Blitz Chess Championship)",
+          text: "Accomodation/Food/Travel (National Under-9 Open & Girls Chess Championship 2026)",
           target: "_blank",
-          link: "https://jharkhandchess.in/registration.aspx",
+          link: "https://jharkhandchess.in/nrb/",
         },
       ],
     },
