@@ -17,10 +17,25 @@ const Navbar = () => {
     {
       title: "Players",
       items: [
-        { text: "AJCA Player Registration (2025–26)", link: "#" },
-        { text: "Players List (2025–26)", link: "#" },
-        { text: "Payment for T-shirt (For National)", link: "#" },
-        { text: "Other Payment", link: "#" },
+        {
+          text: "AJCA Player Registration (2026–27)",
+          target: "_blank",
+          link: "https://jharkhandchess.in/playerregistration.aspx",
+        },
+        {
+          text: "Players List (2026–27)",
+          target: "_blank",
+          link: "https://jharkhandchess.in/playerlist.aspx",
+        },
+        {
+          text: "Payment for T-shirt (For National)",
+          target: "_blank",
+          link: "https://jharkhandchess.in/ajcatshirt.aspx",
+        },
+        {
+          text: "Other Payment",
+          link: "#",
+        },
       ],
     },
     {
@@ -80,7 +95,8 @@ const Navbar = () => {
                     }`}
                     fill="none"
                     stroke="currentColor"
-                    viewBox="0 0 24 24">
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -97,17 +113,19 @@ const Navbar = () => {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150">
+                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
+                      >
                         {item.text}
                       </a>
                     ) : (
                       <Link
                         key={item.text}
                         to={item.link}
-                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150">
+                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
+                      >
                         {item.text}
                       </Link>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -118,7 +136,8 @@ const Navbar = () => {
               href="https://jharkhandchess.in/ajcatshirt.aspx"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors">
+              className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors"
+            >
               AJCA T-shirt Order
             </a>
           </div>
@@ -135,12 +154,14 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
-            className="text-[#2C1B16] focus:outline-none transition-transform duration-300">
+            className="text-[#2C1B16] focus:outline-none transition-transform duration-300"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24">
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -159,7 +180,8 @@ const Navbar = () => {
             <div key={dropdown.title} className="mb-4">
               <button
                 onClick={() => toggleDropdown(dropdown.title)}
-                className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center">
+                className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center"
+              >
                 {dropdown.title}
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${
@@ -167,7 +189,8 @@ const Navbar = () => {
                   }`}
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24">
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -185,17 +208,19 @@ const Navbar = () => {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200">
+                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
+                      >
                         {item.text}
                       </a>
                     ) : (
                       <Link
                         key={item.text}
                         to={item.link}
-                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200">
+                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
+                      >
                         {item.text}
                       </Link>
-                    )
+                    ),
                   )}
                 </div>
               )}
@@ -208,13 +233,15 @@ const Navbar = () => {
               href="https://jharkhandchess.in/ajcatshirt.aspx"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center hover:pl-2 transition-all duration-200">
+              className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center hover:pl-2 transition-all duration-200"
+            >
               AJCA T-shirt Order
               <svg
                 className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
