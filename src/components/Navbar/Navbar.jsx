@@ -49,6 +49,7 @@ const Navbar = () => {
     {
       title: "Calendar",
       items: [
+        { text: "AJCA 2026", link: "https://jharkhandchess.in/pdf/Event Calender.xlsx" },
         { text: "AJCA 2025", link: "#" },
         { text: "AJCA 2024", link: "#" },
         { text: "AJCA 2023", link: "#" },
