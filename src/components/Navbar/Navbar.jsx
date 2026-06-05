@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubSubmenu, setActiveSubSubmenu] = useState(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    setActiveDropdown(null);
+    setActiveSubSubmenu(null);
   };
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+    setActiveSubSubmenu(null);
+  };
+
+  const toggleSubSubmenu = (subSub) => {
+    setActiveSubSubmenu(activeSubSubmenu === subSub ? null : subSub);
   };
 
   const desktopDropdownItems = [
@@ -60,16 +68,23 @@ const Navbar = () => {
     },
     {
       title: "Tournament Entry",
+      isSubMenuParent: true,
+      subMenuTitle: "Under 19 Chess Championship 2026",
       items: [
         {
           text: "Brochure",
           target: "_blank",
-          link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+          link: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
         },
         {
-          text: "Accomodation/Food/Travel (National Under-9 Open & Girls Chess Championship 2026)",
+          text: "Registration",
           target: "_blank",
-          link: "https://jharkhandchess.in/nrb/",
+          link: "https://jharkhandchess.in/registrationu19.aspx",
+        },
+        {
+          text: "Players List",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationu19list.aspx",
         },
       ],
     },
@@ -105,27 +120,69 @@ const Navbar = () => {
                     />
                   </svg>
                 </button>
+
+                {/* Main Dropdown Panel */}
                 <div className="absolute hidden group-hover:block top-full left-0 bg-[#E1DBD8] min-w-[280px] rounded-xl shadow-lg py-3 space-y-2 transition-all duration-300 origin-top transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 -translate-y-2">
-                  {dropdown.items.map((item) =>
-                    item?.target === "_blank" ? (
-                      <a
-                        key={item.text}
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
-                      >
-                        {item.text}
-                      </a>
-                    ) : (
-                      <Link
-                        key={item.text}
-                        to={item.link}
-                        className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
-                      >
-                        {item.text}
-                      </Link>
-                    ),
+                  
+                  {!dropdown.isSubMenuParent ? (
+                    dropdown.items.map((item) =>
+                      item?.target === "_blank" ? (
+                        <a
+                          key={item.text}
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
+                        >
+                          {item.text}
+                        </a>
+                      ) : (
+                        <Link
+                          key={item.text}
+                          to={item.link}
+                          className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
+                        >
+                          {item.text}
+                        </Link>
+                      )
+                    )
+                  ) : (
+                    /* Tournament Entry Flow */
+                    <div className="relative group/sub">
+                      <button className="w-full flex justify-between items-center px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 font-semibold text-left whitespace-nowrap">
+                        {dropdown.subMenuTitle}
+                        <svg
+                          className="w-4 h-4 transform group-hover/sub:translate-x-1 transition-transform ml-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </button>
+
+                      {/* Teesra Level (3 links): Gap ko remove karne ke liye left-full top-0 ke sath pl-1 (padding) use kiya hai taaki safe zone bana rahe */}
+                      <div className="absolute hidden group-hover/sub:block left-full top-0 pl-1 origin-left">
+                        <div className="bg-[#E1DBD8] min-w-[260px] whitespace-nowrap rounded-xl shadow-lg py-2 space-y-1">
+                          {dropdown.items.map((subItem) => (
+                            <a
+                              key={subItem.text}
+                              href={subItem.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 text-sm font-medium"
+                            >
+                              {subItem.text}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   )}
                 </div>
               </div>
@@ -161,7 +218,7 @@ const Navbar = () => {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-            >
+          >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -199,28 +256,73 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
+              
               {activeDropdown === dropdown.title && (
                 <div className="ml-3 space-y-2 border-l-2 border-[#2C1B16] pl-3 transition-all duration-300 ease-in-out">
-                  {dropdown.items.map((item) =>
-                    item?.target === "_blank" ? (
-                      <a
-                        key={item.text}
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
+                  
+                  {!dropdown.isSubMenuParent ? (
+                    dropdown.items.map((item) =>
+                      item?.target === "_blank" ? (
+                        <a
+                          key={item.text}
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
+                        >
+                          {item.text}
+                        </a>
+                      ) : (
+                        <Link
+                          key={item.text}
+                          to={item.link}
+                          className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
+                        >
+                          {item.text}
+                        </Link>
+                      )
+                    )
+                  ) : (
+                    /* Mobile Nested Section */
+                    <div className="py-1">
+                      <button
+                        onClick={() => toggleSubSubmenu(dropdown.subMenuTitle)}
+                        className="w-full text-left text-[#2C1B16] font-semibold text-base py-1.5 flex justify-between items-center opacity-90"
                       >
-                        {item.text}
-                      </a>
-                    ) : (
-                      <Link
-                        key={item.text}
-                        to={item.link}
-                        className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
-                      >
-                        {item.text}
-                      </Link>
-                    ),
+                        {dropdown.subMenuTitle}
+                        <svg
+                          className={`w-3 h-3 transition-transform duration-200 ${
+                            activeSubSubmenu === dropdown.subMenuTitle ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                      
+                      {activeSubSubmenu === dropdown.subMenuTitle && (
+                        <div className="ml-3 mt-1 space-y-2 border-l border-dashed border-[#2C1B16] pl-3">
+                          {dropdown.items.map((subItem) => (
+                            <a
+                              key={subItem.text}
+                              href={subItem.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block text-[#2C1B16] text-sm py-1 hover:pl-1 transition-all duration-200"
+                            >
+                              {subItem.text}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               )}
