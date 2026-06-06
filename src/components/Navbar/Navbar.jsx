@@ -12,6 +12,12 @@ const Navbar = () => {
     setActiveSubSubmenu(null);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+    setActiveSubSubmenu(null);
+  };
+
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
     setActiveSubSubmenu(null);
@@ -111,7 +117,7 @@ const Navbar = () => {
     <nav className="bg-transparent absolute top-0 w-full z-10 container left-0 right-0 m-auto p-5">
       <div className="flex justify-between items-center">
         <div className="flex items-center justify-start gap-5">
-          <Link to="/" className="text-white font-bold text-xl">
+          <Link to="/" onClick={closeMenu} className="text-white font-bold text-xl">
             <img className="h-[50px]" src="./logo/logo.png" alt="Logo" />
           </Link>
 
@@ -138,9 +144,8 @@ const Navbar = () => {
                   </svg>
                 </button>
 
-                {/* Main Dropdown Panel (min-w-[280px]) */}
+                {/* Main Dropdown Panel */}
                 <div className="absolute hidden group-hover:block top-full left-0 bg-[#E1DBD8] min-w-[330px] rounded-xl shadow-lg py-3 space-y-2 transition-all duration-300 origin-top transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 -translate-y-2">
-                  
                   {!dropdown.isMultiTournament ? (
                     dropdown.items.map((item) =>
                       item?.target === "_blank" ? (
@@ -164,7 +169,6 @@ const Navbar = () => {
                       )
                     )
                   ) : (
-                  
                     dropdown.tournaments.map((tournament) => (
                       <div key={tournament.title} className="relative group/sub">
                         <button className="w-full flex justify-between items-center px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 font-semibold text-left leading-tight">
@@ -184,7 +188,6 @@ const Navbar = () => {
                           </svg>
                         </button>
 
-                        
                         <div className="absolute hidden group-hover/sub:block left-full top-0 pl-1 origin-left">
                           <div className="bg-[#E1DBD8] w-[260px] rounded-xl shadow-lg py-2 space-y-1">
                             {tournament.items.map((subItem) => (
@@ -275,10 +278,9 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              
+
               {activeDropdown === dropdown.title && (
                 <div className="ml-3 space-y-2 border-l-2 border-[#2C1B16] pl-3 transition-all duration-300 ease-in-out">
-                  
                   {!dropdown.isMultiTournament ? (
                     dropdown.items.map((item) =>
                       item?.target === "_blank" ? (
@@ -287,6 +289,7 @@ const Navbar = () => {
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={closeMenu}
                           className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
                         >
                           {item.text}
@@ -295,6 +298,7 @@ const Navbar = () => {
                         <Link
                           key={item.text}
                           to={item.link}
+                          onClick={closeMenu}
                           className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200"
                         >
                           {item.text}
@@ -302,7 +306,6 @@ const Navbar = () => {
                       )
                     )
                   ) : (
-                    /* Mobile Tournaments Loop */
                     dropdown.tournaments.map((tournament) => (
                       <div key={tournament.title} className="py-1">
                         <button
@@ -326,7 +329,7 @@ const Navbar = () => {
                             />
                           </svg>
                         </button>
-                        
+
                         {activeSubSubmenu === tournament.title && (
                           <div className="ml-3 mt-1 space-y-2 border-l border-dashed border-[#2C1B16] pl-3">
                             {tournament.items.map((subItem) => (
@@ -335,6 +338,7 @@ const Navbar = () => {
                                 href={subItem.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={closeMenu}
                                 className="block text-[#2C1B16] text-sm py-1 hover:pl-1 transition-all duration-200"
                               >
                                 {subItem.text}
@@ -356,6 +360,7 @@ const Navbar = () => {
               href="https://jharkhandchess.in/ajcatshirt.aspx"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={closeMenu}
               className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center hover:pl-2 transition-all duration-200"
             >
               AJCA T-shirt Order

@@ -86,7 +86,7 @@ export default function Certificate() {
         <span className="absolute left-[6%] top-1/2 -translate-y-1/2 text-[80px] text-[#d4a853] opacity-10 select-none">♟</span>
         <span className="absolute right-[6%] top-1/2 -translate-y-1/2 text-[80px] text-[#d4a853] opacity-10 select-none">♛</span>
 
-        <div className="relative z-10">
+        <div className="relative ">
           <p className="text-[#d4a853] text-xs tracking-[0.3em] uppercase mb-3">
             Jharkhand Chess Association
           </p>
