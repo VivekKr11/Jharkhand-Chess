@@ -9,6 +9,7 @@ const events = [
     endDate: "2026-06-10",
     place: "Ranchi",
     category: "State",
+    brochure: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
   },
   {
     id: 2,
@@ -72,6 +73,7 @@ const events = [
     endDate: "2026-07-12",
     place: "Ranchi",
     category: "National",
+    brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
   },
   {
     id: 9,
@@ -81,6 +83,7 @@ const events = [
     endDate: "2026-07-12",
     place: "Ranchi",
     category: "National",
+    brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
   },
 ];
 
@@ -114,21 +117,22 @@ const EventCalendar2026 = () => {
         <div className="mt-6 h-px bg-[#2C1B16]/15 w-full" />
       </div>
 
-      {/* Table */}
+      {/* Table Section */}
       <div className="container mx-auto px-4 pb-20">
 
-        {/* Desktop */}
+        {/* Desktop View */}
         <div className="hidden md:block overflow-hidden rounded-xl border border-[#2C1B16]/10">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b border-[#2C1B16]/10 bg-[#2C1B16]/5">
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider w-8">#</th>
-                <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Tournament</th>
+                <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider max-w-[380px]">Tournament</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Event Code</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Start</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">End</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Duration</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Venue</th>
+                <th className="text-right px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Brochure</th>
               </tr>
             </thead>
             <tbody>
@@ -144,7 +148,7 @@ const EventCalendar2026 = () => {
                     <td className="px-5 py-4 text-[#815b4f]/60 font-mono text-xs">
                       {String(idx + 1).padStart(2, "0")}
                     </td>
-                    <td className="px-5 py-4">
+                    <td className="px-5 py-4 max-w-[380px]">
                       <div className="flex items-center gap-2">
                         {ongoing && (
                           <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-[#2C1B16] animate-pulse" />
@@ -159,6 +163,23 @@ const EventCalendar2026 = () => {
                     <td className="px-5 py-4 text-[#2C1B16] whitespace-nowrap">{formatDate(ev.endDate)}</td>
                     <td className="px-5 py-4 text-[#815b4f]">{getDuration(ev.startDate, ev.endDate)}</td>
                     <td className="px-5 py-4 text-[#2C1B16]">{ev.place}</td>
+                    <td className="px-5 py-4 text-right whitespace-nowrap">
+                      {ev.brochure ? (
+                        <a
+                          href={ev.brochure}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 px-3 py-1.5 rounded-md transition-colors"
+                        >
+                          View PDF
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <span className="text-[#815b4f]/40 text-xs italic">Not Available</span>
+                      )}
+                    </td>
                   </tr>
                 );
               })}
@@ -166,7 +187,7 @@ const EventCalendar2026 = () => {
           </table>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile View */}
         <div className="md:hidden flex flex-col divide-y divide-[#2C1B16]/10 border border-[#2C1B16]/10 rounded-xl overflow-hidden">
           {events.map((ev, idx) => {
             const ongoing = isOngoing(ev.startDate, ev.endDate);
@@ -183,18 +204,33 @@ const EventCalendar2026 = () => {
                     <p className="text-[#2C1B16] font-semibold text-sm leading-snug">{ev.name}</p>
                   </div>
                 </div>
+                
                 <div className="ml-6 text-xs text-[#815b4f] font-mono mb-2">{ev.code}</div>
-                <div className="ml-6 flex flex-wrap gap-x-5 gap-y-1 text-xs">
+                
+                <div className="ml-6 flex flex-wrap gap-x-5 gap-y-1 text-xs mb-3">
                   <span className="text-[#2C1B16]">{formatDate(ev.startDate)} → {formatDate(ev.endDate)}</span>
                   <span className="text-[#815b4f]">{getDuration(ev.startDate, ev.endDate)}</span>
                   <span className="text-[#815b4f]">{ev.place}</span>
                 </div>
+
+                {/* Mobile Button: Fully cleaned and text fixed to "View PDF" */}
+                {ev.brochure && (
+                  <div className="ml-6 pt-1">
+                    <a
+                      href={ev.brochure}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 w-full sm:w-auto px-4 py-2.5 rounded-lg transition-colors text-center border border-[#2C1B16]/5"
+                    >
+                      View PDF
+                    </a>
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
 
-      
       </div>
     </div>
   );
