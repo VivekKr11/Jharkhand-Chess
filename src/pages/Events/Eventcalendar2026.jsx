@@ -19,6 +19,7 @@ const events = [
     endDate: "2026-06-12",
     place: "Ranchi",
     category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
   },
   {
     id: 3,
@@ -27,7 +28,7 @@ const events = [
     startDate: "2026-06-12",
     endDate: "2026-06-14",
     place: "Ranchi",
-    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
   },
   {
     id: 4,

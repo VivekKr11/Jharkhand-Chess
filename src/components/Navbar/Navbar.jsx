@@ -70,47 +70,67 @@ const Navbar = () => {
         { text: "Certificates", link: "/certificates" },
       ],
     },
+   {
+  title: "Tournament Entry",
+  isMultiTournament: true,
+  tournaments: [
     {
-      title: "Tournament Entry",
-      isMultiTournament: true,
-      tournaments: [
+      title: "Under 19 Chess Championship 2026",
+      items: [
         {
-          title: "Under 19 Chess Championship 2026",
-          items: [
-            {
-              text: "Brochure",
-              target: "_blank",
-              link: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
-            },
-            {
-              text: "Registration",
-              target: "_blank",
-              link: "https://jharkhandchess.in/registrationu19.aspx",
-            },
-            {
-              text: "Players List",
-              target: "_blank",
-              link: "https://jharkhandchess.in/registrationu19list.aspx",
-            },
-          ],
+          text: "Brochure",
+          target: "_blank",
+          link: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
         },
         {
-          title: "39th National Under-9 Open & Girls Chess Championship 2026",
-          items: [
-            {
-              text: "Brochure",
-              target: "_blank",
-              link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
-            },
-            {
-              text: "Payment for Accommodation, Boarding & Pick-Drop",
-              target: "_blank",
-              link: "https://jharkhandchess.in/nrb/",
-            },
-          ],
+          text: "Registration",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationu19.aspx",
+        },
+        {
+          text: "Players List",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationu19list.aspx",
         },
       ],
     },
+    {
+      title: "39th National Under-9 Open & Girls Chess Championship 2026",
+      items: [
+        {
+          text: "Brochure",
+          target: "_blank",
+          link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+        },
+        {
+          text: "Payment for Accommodation, Boarding & Pick-Drop",
+          target: "_blank",
+          link: "https://jharkhandchess.in/nrb/",
+        },
+      ],
+    },
+    {
+      title: "Under 7-13 Chess Championship 2026",
+      items: [
+        {
+          text: "Brochure",
+          target: "_blank",
+          link: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+        },
+        {
+          text: "Entry",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationu13.aspx",
+        },
+        {
+          text: "Players List",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationu13list.aspx",
+        },
+      ],
+    },
+  ],
+}
   ];
 
   return (
