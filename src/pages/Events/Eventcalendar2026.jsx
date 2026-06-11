@@ -10,6 +10,7 @@ const events = [
     place: "Ranchi",
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
+    result:"https://s1.chess-results.com/tnr1423783.aspx?lan=1&art=1&rd=8&SNode=S0"
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const events = [
     place: "Ranchi",
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result:"https://s1.chess-results.com/tnr1435302.aspx?lan=1&art=1&SNode=S0"
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const events = [
     endDate: "2026-06-17",
     place: "Ranchi",
     category: "FIDE Rated",
+    brochure: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
   },
   {
     id: 5,
@@ -131,9 +134,10 @@ const EventCalendar2026 = () => {
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Event Code</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Start</th>
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">End</th>
-                <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Duration</th>
+                {/* <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Duration</th> */}
                 <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Venue</th>
-                <th className="text-right px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Brochure</th>
+                <th className="text-center px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Brochure</th>
+                 <th className="text-center px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Result</th>
               </tr>
             </thead>
             <tbody>
@@ -162,7 +166,7 @@ const EventCalendar2026 = () => {
                     </td>
                     <td className="px-5 py-4 text-[#2C1B16] whitespace-nowrap">{formatDate(ev.startDate)}</td>
                     <td className="px-5 py-4 text-[#2C1B16] whitespace-nowrap">{formatDate(ev.endDate)}</td>
-                    <td className="px-5 py-4 text-[#815b4f]">{getDuration(ev.startDate, ev.endDate)}</td>
+                    {/* <td className="px-5 py-4 text-[#815b4f]">{getDuration(ev.startDate, ev.endDate)}</td> */}
                     <td className="px-5 py-4 text-[#2C1B16]">{ev.place}</td>
                     <td className="px-5 py-4 text-right whitespace-nowrap">
                       {ev.brochure ? (
@@ -173,6 +177,23 @@ const EventCalendar2026 = () => {
                           className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 px-3 py-1.5 rounded-md transition-colors"
                         >
                           View PDF
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <span className="text-[#815b4f]/40 text-xs italic">Not Available</span>
+                      )}
+                    </td>
+                    <td className="px-5 py-4 text-right whitespace-nowrap">
+                      {ev.result ? (
+                        <a
+                          href={ev.result}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 px-3 py-1.5 rounded-md transition-colors"
+                        >
+                          View Result
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                           </svg>
