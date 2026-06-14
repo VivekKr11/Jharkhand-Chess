@@ -129,26 +129,26 @@ const Navbar = () => {
         },
       ],
     },
-      {
-      title: "Under 15 Chess Championship 2026",
-      items: [
-        {
-          text: "Brochure",
-          target: "_blank",
-          link: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
-        },
-        {
-          text: "Entry",
-          target: "_blank",
-          link: "https://jharkhandchess.in/registrationu15.aspx",
-        },
-        {
-          text: "Players List",
-          target: "_blank",
-          link: "https://jharkhandchess.in/registrationu15list.aspx",
-        },
-      ],
-    },
+    //   {
+    //   title: "Under 15 Chess Championship 2026",
+    //   items: [
+    //     {
+    //       text: "Brochure",
+    //       target: "_blank",
+    //       link: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
+    //     },
+    //     {
+    //       text: "Entry",
+    //       target: "_blank",
+    //       link: "https://jharkhandchess.in/registrationu15.aspx",
+    //     },
+    //     {
+    //       text: "Players List",
+    //       target: "_blank",
+    //       link: "https://jharkhandchess.in/registrationu15list.aspx",
+    //     },
+    //   ],
+    // },
   ],
 }
   ];
