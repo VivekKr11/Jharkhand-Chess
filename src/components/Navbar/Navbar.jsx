@@ -129,6 +129,26 @@ const Navbar = () => {
         },
       ],
     },
+      {
+      title: "Aditya Birla Memorial Chess Championship 2026 ",
+      items: [
+        {
+          text: "Brochure",
+          target: "_blank",
+          link: "https://jharkhandchess.in/pdf/ADITYA-BIRLA-MEMORIAL-26.pdf",
+        },
+        {
+          text: "Entry",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationabm.aspx",
+        },
+        {
+          text: "Players List",
+          target: "_blank",
+          link: "https://jharkhandchess.in/registrationabmlist.aspx",
+        },
+      ],
+    },
     //   {
     //   title: "Under 15 Chess Championship 2026",
     //   items: [
