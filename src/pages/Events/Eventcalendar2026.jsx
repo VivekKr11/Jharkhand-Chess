@@ -284,7 +284,7 @@ const EventList = ({ events, emptyMessage }) => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 w-full sm:w-auto px-4 py-2.5 rounded-lg transition-colors text-center border border-[#2C1B16]/5"
                     >
-                      View PDF
+                      View Brochure
                     </a>
                   )}
                   {ev.result && (
