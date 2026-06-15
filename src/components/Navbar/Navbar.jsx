@@ -109,26 +109,26 @@ const Navbar = () => {
         },
       ],
     },
-    {
-      title: "Under 7-13 Chess Championship 2026",
-      items: [
-        {
-          text: "Brochure",
-          target: "_blank",
-          link: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
-        },
-        {
-          text: "Entry",
-          target: "_blank",
-          link: "https://jharkhandchess.in/registrationu13.aspx",
-        },
-        {
-          text: "Players List",
-          target: "_blank",
-          link: "https://jharkhandchess.in/registrationu13list.aspx",
-        },
-      ],
-    },
+    // {
+    //   title: "Under 7-13 Chess Championship 2026",
+    //   items: [
+    //     {
+    //       text: "Brochure",
+    //       target: "_blank",
+    //       link: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    //     },
+    //     {
+    //       text: "Entry",
+    //       target: "_blank",
+    //       link: "https://jharkhandchess.in/registrationu13.aspx",
+    //     },
+    //     {
+    //       text: "Players List",
+    //       target: "_blank",
+    //       link: "https://jharkhandchess.in/registrationu13list.aspx",
+    //     },
+    //   ],
+    // },
       {
       title: "Aditya Birla Memorial Chess Championship 2026 ",
       items: [
