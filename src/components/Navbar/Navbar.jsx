@@ -130,12 +130,12 @@ const Navbar = () => {
     //   ],
     // },
       {
-      title: "Aditya Birla Memorial Chess Championship 2026 ",
+      title: "Rapid & Blitz Chess Championship - 2026",
       items: [
         {
           text: "Brochure",
           target: "_blank",
-          link: "https://jharkhandchess.in/pdf/ADITYA-BIRLA-MEMORIAL-26.pdf",
+          link: "https://jharkhandchess.in/pdf/RAPID_&_Blitz_CHESS_CHAMPIONSHIP_2026.pdf",
         },
         {
           text: "Entry",
