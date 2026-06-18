@@ -140,12 +140,12 @@ const Navbar = () => {
         {
           text: "Entry",
           target: "_blank",
-          link: "https://jharkhandchess.in/registrationabm.aspx",
+          link: "https://jharkhandchess.in/registrationrb.aspx",
         },
         {
           text: "Players List",
           target: "_blank",
-          link: "https://jharkhandchess.in/registrationabmlist.aspx",
+          link: "https://jharkhandchess.in/registrationrblist.aspx",
         },
       ],
     },
