@@ -137,11 +137,11 @@ const Navbar = () => {
           target: "_blank",
           link: "https://jharkhandchess.in/pdf/RAPID_&_Blitz_CHESS_CHAMPIONSHIP_2026.pdf",
         },
-        {
-          text: "Entry",
-          target: "_blank",
-          link: "https://jharkhandchess.in/registrationrb.aspx",
-        },
+        // {
+        //   text: "Entry",
+        //   target: "_blank",
+        //   link: "https://jharkhandchess.in/registrationrb.aspx",
+        // },
         {
           text: "Players List",
           target: "_blank",
