@@ -32,10 +32,7 @@ const SLIDES = [
   },
 ];
 const data = [
-  "Aditya Birla Memorial: 23rd Jharkhand State FIDE Rating Chess Championship 2024 to be Held from 20th to 23rd July",
-  "23rd Jharkhand State FIDE Rating Chess Championship: Eligibility, Rules, and Prize Details Announced",
-  "Register Now for the Jharkhand State FIDE Chess Championship 2024: Key Dates and Entry Requirements",
-  "Jharkhand Chess Championship 2024: Prizes, Programme, and Accommodation Details Released",
+  "🔔 Important Notification -Last date for Boarding & Transport Registration is 3rd July 2026, 6:00 PM. -Please ensure you complete your registration before the deadline. No requests will be accepted after the closing time.",
 ];
 
 const Home = () => {
