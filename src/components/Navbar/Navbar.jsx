@@ -70,107 +70,107 @@ const Navbar = () => {
         { text: "Certificates", link: "/certificates" },
       ],
     },
-   {
-  title: "Tournament Entry",
-  isMultiTournament: true,
-  tournaments: [
-    // {
-    //   title: "Under 19 Chess Championship 2026",
-    //   items: [
-    //     {
-    //       text: "Brochure",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
-    //     },
-    //     {
-    //       text: "Registration",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/registrationu19.aspx",
-    //     },
-    //     {
-    //       text: "Players List",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/registrationu19list.aspx",
-    //     },
-    //   ],
-    // },
     {
-      title: "39th National Under-9 Open & Girls Chess Championship 2026",
-      items: [
-        {
-          text: "Brochure",
-          target: "_blank",
-          link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
-        },
-        {
-          text: "Payment for Accommodation, Boarding & Pick-Drop",
-          target: "_blank",
-          link: "https://jharkhandchess.in/nrb/",
-        },
-      ],
-    },
-    // {
-    //   title: "Under 7-13 Chess Championship 2026",
-    //   items: [
-    //     {
-    //       text: "Brochure",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
-    //     },
-    //     {
-    //       text: "Entry",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/registrationu13.aspx",
-    //     },
-    //     {
-    //       text: "Players List",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/registrationu13list.aspx",
-    //     },
-    //   ],
-    // },
-      {
-      title: "Rapid & Blitz Chess Championship - 2026",
-      items: [
-        {
-          text: "Brochure",
-          target: "_blank",
-          link: "https://jharkhandchess.in/pdf/RAPID_&_Blitz_CHESS_CHAMPIONSHIP_2026.pdf",
-        },
+      title: "Tournament Entry",
+      isMultiTournament: true,
+      tournaments: [
         // {
-        //   text: "Entry",
-        //   target: "_blank",
-        //   link: "https://jharkhandchess.in/registrationrb.aspx",
+        //   title: "Under 19 Chess Championship 2026",
+        //   items: [
+        //     {
+        //       text: "Brochure",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
+        //     },
+        //     {
+        //       text: "Registration",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationu19.aspx",
+        //     },
+        //     {
+        //       text: "Players List",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationu19list.aspx",
+        //     },
+        //   ],
         // },
-        {
-          text: "Players List",
-          target: "_blank",
-          link: "https://jharkhandchess.in/registrationrblist.aspx",
-        },
+        // {
+        //   title: "39th National Under-9 Open & Girls Chess Championship 2026",
+        //   items: [
+        //     {
+        //       text: "Brochure",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+        //     },
+        //     {
+        //       text: "Payment for Accommodation, Boarding & Pick-Drop",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/nrb/",
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: "Under 7-13 Chess Championship 2026",
+        //   items: [
+        //     {
+        //       text: "Brochure",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+        //     },
+        //     {
+        //       text: "Entry",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationu13.aspx",
+        //     },
+        //     {
+        //       text: "Players List",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationu13list.aspx",
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: "Rapid & Blitz Chess Championship - 2026",
+        //   items: [
+        //     {
+        //       text: "Brochure",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/pdf/RAPID_&_Blitz_CHESS_CHAMPIONSHIP_2026.pdf",
+        //     },
+        //     {
+        //       text: "Entry",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationrb.aspx",
+        //     },
+        //     {
+        //       text: "Players List",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationrblist.aspx",
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: "Under 15 Chess Championship 2026",
+        //   items: [
+        //     {
+        //       text: "Brochure",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
+        //     },
+        //     {
+        //       text: "Entry",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationu15.aspx",
+        //     },
+        //     {
+        //       text: "Players List",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationu15list.aspx",
+        //     },
+        //   ],
+        // },
       ],
     },
-    //   {
-    //   title: "Under 15 Chess Championship 2026",
-    //   items: [
-    //     {
-    //       text: "Brochure",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
-    //     },
-    //     {
-    //       text: "Entry",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/registrationu15.aspx",
-    //     },
-    //     {
-    //       text: "Players List",
-    //       target: "_blank",
-    //       link: "https://jharkhandchess.in/registrationu15list.aspx",
-    //     },
-    //   ],
-    // },
-  ],
-}
   ];
 
   return (
@@ -205,68 +205,70 @@ const Navbar = () => {
                 </button>
 
                 {/* Main Dropdown Panel */}
-                <div className="absolute hidden group-hover:block top-full left-0 bg-[#E1DBD8] min-w-[330px] rounded-xl shadow-lg py-3 space-y-2 transition-all duration-300 origin-top transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 -translate-y-2">
-                  {!dropdown.isMultiTournament ? (
-                    dropdown.items.map((item) =>
-                      item?.target === "_blank" ? (
-                        <a
-                          key={item.text}
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
-                        >
-                          {item.text}
-                        </a>
-                      ) : (
-                        <Link
-                          key={item.text}
-                          to={item.link}
-                          className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
-                        >
-                          {item.text}
-                        </Link>
-                      )
-                    )
-                  ) : (
-                    dropdown.tournaments.map((tournament) => (
-                      <div key={tournament.title} className="relative group/sub">
-                        <button className="w-full flex justify-between items-center px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 font-semibold text-left leading-tight">
-                          <span className="pr-2">{tournament.title}</span>
-                          <svg
-                            className="w-4 h-4 transform group-hover/sub:translate-x-1 transition-transform ml-2 flex-shrink-0"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                {(!dropdown.isMultiTournament || dropdown.tournaments.length > 0) && (
+                  <div className="absolute hidden group-hover:block top-full left-0 bg-[#E1DBD8] min-w-[330px] rounded-xl shadow-lg py-3 space-y-2 transition-all duration-300 origin-top transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 -translate-y-2">
+                    {!dropdown.isMultiTournament ? (
+                      dropdown.items.map((item) =>
+                        item?.target === "_blank" ? (
+                          <a
+                            key={item.text}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </button>
+                            {item.text}
+                          </a>
+                        ) : (
+                          <Link
+                            key={item.text}
+                            to={item.link}
+                            className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150"
+                          >
+                            {item.text}
+                          </Link>
+                        )
+                      )
+                    ) : (
+                      dropdown.tournaments.map((tournament) => (
+                        <div key={tournament.title} className="relative group/sub">
+                          <button className="w-full flex justify-between items-center px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 font-semibold text-left leading-tight">
+                            <span className="pr-2">{tournament.title}</span>
+                            <svg
+                              className="w-4 h-4 transform group-hover/sub:translate-x-1 transition-transform ml-2 flex-shrink-0"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </button>
 
-                        <div className="absolute hidden group-hover/sub:block left-full top-0 pl-1 origin-left">
-                          <div className="bg-[#E1DBD8] w-[260px] rounded-xl shadow-lg py-2 space-y-1">
-                            {tournament.items.map((subItem) => (
-                              <a
-                                key={subItem.text}
-                                href={subItem.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 text-sm font-medium whitespace-normal leading-snug"
-                              >
-                                {subItem.text}
-                              </a>
-                            ))}
+                          <div className="absolute hidden group-hover/sub:block left-full top-0 pl-1 origin-left">
+                            <div className="bg-[#E1DBD8] w-[260px] rounded-xl shadow-lg py-2 space-y-1">
+                              {tournament.items.map((subItem) => (
+                                <a
+                                  key={subItem.text}
+                                  href={subItem.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 text-sm font-medium whitespace-normal leading-snug"
+                                >
+                                  {subItem.text}
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))
-                  )}
-                </div>
+                      ))
+                    )}
+                  </div>
+                )}
               </div>
             ))}
 
@@ -339,7 +341,7 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              {activeDropdown === dropdown.title && (
+              {activeDropdown === dropdown.title && (!dropdown.isMultiTournament || dropdown.tournaments.length > 0) && (
                 <div className="ml-3 space-y-2 border-l-2 border-[#2C1B16] pl-3 transition-all duration-300 ease-in-out">
                   {!dropdown.isMultiTournament ? (
                     dropdown.items.map((item) =>
