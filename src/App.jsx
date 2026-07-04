@@ -18,6 +18,7 @@ function App() {
         <Route path="/registrationform" element={<RegistrationForm />} />
         <Route path="/playerlist" element={<PlayerList />} />
         <Route path="/certificates" element={<Certificate />} />
+        <Route path="/certificates/:eventId" element={<Certificate />} /> 
         <Route path="/eventcalendar2026" element={<EventCalendar2026 />} />
       </Routes>
       <Footer />

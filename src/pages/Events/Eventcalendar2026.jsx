@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, Award } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const events = [
   {
@@ -11,7 +12,8 @@ const events = [
     place: "Ranchi",
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
-    result: "https://s1.chess-results.com/tnr1423783.aspx?lan=1&art=1&rd=8&SNode=S0"
+    result: "https://s1.chess-results.com/tnr1423783.aspx?lan=1&art=1&rd=8&SNode=S0",
+    certificateEventId: "state-junior-2026"
   },
   {
     id: 2,
@@ -22,7 +24,8 @@ const events = [
     place: "Ranchi",
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
-    result: "https://s1.chess-results.com/tnr1435302.aspx?lan=1&art=1&SNode=S0"
+    result: "https://s1.chess-results.com/tnr1435302.aspx?lan=1&art=1&SNode=S0",
+    certificateEventId: null
   },
   {
     id: 3,
@@ -33,6 +36,8 @@ const events = [
     place: "Ranchi",
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: null
   },
   {
     id: 4,
@@ -43,6 +48,8 @@ const events = [
     place: "Ranchi",
     category: "FIDE Rated",
     brochure: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
+    result: null,
+    certificateEventId: null
   },
   {
     id: 5,
@@ -52,6 +59,9 @@ const events = [
     endDate: "2026-06-20",
     place: "Ranchi",
     category: "FIDE Rated",
+    brochure: null,
+    result: null,
+    certificateEventId: null
   },
   {
     id: 6,
@@ -61,6 +71,9 @@ const events = [
     endDate: "2026-06-21",
     place: "Ranchi",
     category: "Rapid",
+    brochure: null,
+    result: null,
+    certificateEventId: null
   },
   {
     id: 7,
@@ -70,6 +83,9 @@ const events = [
     endDate: "2026-06-22",
     place: "Ranchi",
     category: "Blitz",
+    brochure: null,
+    result: null,
+    certificateEventId: "state-blitz-2026"
   },
   {
     id: 8,
@@ -80,6 +96,8 @@ const events = [
     place: "Ranchi",
     category: "National",
     brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+    result: null,
+    certificateEventId: null
   },
 ];
 
@@ -98,9 +116,6 @@ const isOngoing = (start, end) => {
   return new Date(start) <= now && now <= new Date(end);
 };
 
-// An event becomes "past" the moment its end date has fully elapsed.
-// Since this is evaluated on every render, events move themselves into
-// the Past Events section automatically as soon as the date arrives.
 const isPastEvent = (end) => {
   const now = new Date();
   const endOfDay = new Date(end);
@@ -108,9 +123,6 @@ const isPastEvent = (end) => {
   return endOfDay < now;
 };
 
-// Groups events into "National" or "State" championships.
-// Falls back to the event name when the category field doesn't
-// explicitly say "National" (most AJCA events are State-level).
 const getGroup = (ev) => {
   if (ev.category === "National" || ev.name.toLowerCase().includes("national")) {
     return "National";
@@ -124,7 +136,6 @@ const PdfIcon = () => (
   </svg>
 );
 
-// Chess King / Crown — used for National Championships
 const CrownIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
     <rect x="11" y="1" width="2" height="4" />
@@ -135,7 +146,6 @@ const CrownIcon = ({ className }) => (
   </svg>
 );
 
-// Chess Rook / Castle — used for State Championships
 const RookIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
     <rect x="5" y="2" width="3" height="4" />
@@ -147,8 +157,15 @@ const RookIcon = ({ className }) => (
   </svg>
 );
 
-// Renders the desktop table + mobile card list for a given set of events.
 const EventList = ({ events, emptyMessage }) => {
+  const navigate = useNavigate();
+
+  const handleViewCertificates = (eventId) => {
+    if (eventId) {
+      navigate(`/certificates/${eventId}`);
+    }
+  };
+
   if (events.length === 0) {
     return (
       <div className="text-center py-10 px-5 text-[#815b4f]/60 text-sm italic border border-[#2C1B16]/10 rounded-xl bg-white">
@@ -172,11 +189,15 @@ const EventList = ({ events, emptyMessage }) => {
               <th className="text-left px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Venue</th>
               <th className="text-center px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Brochure</th>
               <th className="text-center px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Result</th>
+              <th className="text-center px-5 py-3 text-[#815b4f] text-xs font-bold uppercase tracking-wider">Certificate</th>
             </tr>
           </thead>
           <tbody>
             {events.map((ev, idx) => {
               const ongoing = isOngoing(ev.startDate, ev.endDate);
+              const isPast = isPastEvent(ev.endDate);
+              const hasCertificates = ev.certificateEventId && isPast;
+
               return (
                 <tr
                   key={ev.id}
@@ -201,7 +222,7 @@ const EventList = ({ events, emptyMessage }) => {
                   <td className="px-5 py-4 text-[#2C1B16] whitespace-nowrap">{formatDate(ev.startDate)}</td>
                   <td className="px-5 py-4 text-[#2C1B16] whitespace-nowrap">{formatDate(ev.endDate)}</td>
                   <td className="px-5 py-4 text-[#2C1B16]">{ev.place}</td>
-                  <td className="px-5 py-4 text-right whitespace-nowrap">
+                  <td className="px-5 py-4 text-center whitespace-nowrap">
                     {ev.brochure ? (
                       <a
                         href={ev.brochure}
@@ -216,7 +237,7 @@ const EventList = ({ events, emptyMessage }) => {
                       <span className="text-[#815b4f]/40 text-xs italic">Not Available</span>
                     )}
                   </td>
-                  <td className="px-5 py-4 text-right whitespace-nowrap">
+                  <td className="px-5 py-4 text-center whitespace-nowrap">
                     {ev.result ? (
                       <a
                         href={ev.result}
@@ -231,6 +252,21 @@ const EventList = ({ events, emptyMessage }) => {
                       <span className="text-[#815b4f]/40 text-xs italic">Not Available</span>
                     )}
                   </td>
+                  <td className="px-5 py-4 text-center whitespace-nowrap">
+                    {hasCertificates ? (
+                      <button
+                        onClick={() => handleViewCertificates(ev.certificateEventId)}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d4a853] bg-[#2C1B16] hover:bg-[#3d2412] px-3 py-1.5 rounded-md transition-colors"
+                      >
+                        <Award className="w-3.5 h-3.5" />
+                        View
+                      </button>
+                    ) : isPast ? (
+                      <span className="text-[#815b4f]/40 text-xs italic">Coming Soon</span>
+                    ) : (
+                      <span className="text-[#815b4f]/40 text-xs italic">After Event</span>
+                    )}
+                  </td>
                 </tr>
               );
             })}
@@ -242,13 +278,16 @@ const EventList = ({ events, emptyMessage }) => {
       <div className="md:hidden flex flex-col divide-y divide-[#2C1B16]/10 border border-[#2C1B16]/10 rounded-xl overflow-hidden">
         {events.map((ev, idx) => {
           const ongoing = isOngoing(ev.startDate, ev.endDate);
+          const isPast = isPastEvent(ev.endDate);
+          const hasCertificates = ev.certificateEventId && isPast;
+
           return (
             <div key={ev.id} className={`px-4 py-4 bg-white ${ongoing ? "bg-[#2C1B16]/5" : ""}`}>
               <div className="flex items-start gap-2 mb-2">
                 <span className="text-[#815b4f]/50 font-mono text-xs mt-0.5 shrink-0">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
-                <div className="flex items-start gap-2">
+                <div className="flex items-start gap-2 flex-1">
                   {ongoing && (
                     <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#2C1B16] animate-pulse" />
                   )}
@@ -275,30 +314,37 @@ const EventList = ({ events, emptyMessage }) => {
                 </span>
               </div>
 
-              {(ev.brochure || ev.result) && (
-                <div className="ml-6 pt-1 flex flex-col sm:flex-row gap-2">
-                  {ev.brochure && (
-                    <a
-                      href={ev.brochure}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 w-full sm:w-auto px-4 py-2.5 rounded-lg transition-colors text-center border border-[#2C1B16]/5"
-                    >
-                      View Brochure
-                    </a>
-                  )}
-                  {ev.result && (
-                    <a
-                      href={ev.result}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 w-full sm:w-auto px-4 py-2.5 rounded-lg transition-colors text-center border border-[#2C1B16]/5"
-                    >
-                      View Result
-                    </a>
-                  )}
-                </div>
-              )}
+              <div className="ml-6 pt-1 flex flex-wrap gap-2">
+                {ev.brochure && (
+                  <a
+                    href={ev.brochure}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 flex-1 min-w-[120px] px-4 py-2.5 rounded-lg transition-colors text-center border border-[#2C1B16]/5"
+                  >
+                    View Brochure
+                  </a>
+                )}
+                {ev.result && (
+                  <a
+                    href={ev.result}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#815b4f] bg-[#2C1B16]/5 hover:bg-[#2C1B16]/10 flex-1 min-w-[120px] px-4 py-2.5 rounded-lg transition-colors text-center border border-[#2C1B16]/5"
+                  >
+                    View Result
+                  </a>
+                )}
+                {hasCertificates && (
+                  <button
+                    onClick={() => handleViewCertificates(ev.certificateEventId)}
+                    className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4a853] bg-[#2C1B16] hover:bg-[#3d2412] flex-1 min-w-[120px] px-4 py-2.5 rounded-lg transition-colors text-center"
+                  >
+                    <Award className="w-4 h-4" />
+                    View Certificates
+                  </button>
+                )}
+              </div>
             </div>
           );
         })}
@@ -307,7 +353,6 @@ const EventList = ({ events, emptyMessage }) => {
   );
 };
 
-// Renders the Upcoming/Ongoing + Past sections for a single category (State or National)
 const CategorySection = ({ title, group, icon }) => {
   const [view, setView] = useState("upcoming");
 
@@ -342,7 +387,6 @@ const CategorySection = ({ title, group, icon }) => {
         </p>
       </div>
 
-      {/* Upcoming / Past Toggle */}
       <div className="flex justify-center gap-2 mb-8">
         <button
           onClick={() => setView("upcoming")}
@@ -366,7 +410,6 @@ const CategorySection = ({ title, group, icon }) => {
         </button>
       </div>
 
-      {/* Active List */}
       <div>
         {view === "upcoming" ? (
           <EventList
