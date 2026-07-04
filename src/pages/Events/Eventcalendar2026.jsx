@@ -61,7 +61,7 @@ const events = [
     category: "FIDE Rated",
     brochure: null,
     result: null,
-    certificateEventId: null
+    certificateEventId: "state-fide-2026"
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const events = [
     category: "Rapid",
     brochure: null,
     result: null,
-    certificateEventId: null
+    certificateEventId: "state-rapid-2026"
   },
   {
     id: 7,

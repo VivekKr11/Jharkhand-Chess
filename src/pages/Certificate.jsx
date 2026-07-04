@@ -1,54 +1,61 @@
-import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import CertificateViewer from './Certificates/CertificateViewer'
-
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import CertificateViewer from "./Certificates/CertificateViewer";
 
 const EVENTS = [
   {
-    id: 'state-school-rapid-2025',
-    name: '1st Jharkhand State Schools Rapid Chess Championship 2025',
+    id: "state-school-rapid-2025",
+    name: "1st Jharkhand State Schools Rapid Chess Championship 2025",
   },
   {
-    id: 'state-junior-2026',
-    name: '25th Jharkhand State Junior Chess Championship 2026 (Open)',
+    id: "state-junior-2026",
+    name: "25th Jharkhand State Junior Chess Championship 2026 (Open)",
   },
   {
-    id: 'state-blitz-2026',
-    name: '4th Jharkhand State Blitz Chess Championship - 2026',
+    id: "state-blitz-2026",
+    name: "4th Jharkhand State Blitz Chess Championship - 2026",
   },
-]
+  {
+    id: "state-rapid-2026",
+    name: "5th Jharkhand State Rapid Chess Championship - 2026",
+  },
+  {
+    id: 'state-fide-2026',  
+    name: '25th Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship - 2026',
+  },
+];
 
 export default function Certificate() {
-  const { eventId: urlEventId } = useParams()
-  const navigate = useNavigate()
-  const [activeEventId, setActiveEventId] = useState('')
+  const { eventId: urlEventId } = useParams();
+  const navigate = useNavigate();
+  const [activeEventId, setActiveEventId] = useState("");
 
-  // Set initial event from URL when component mounts or URL changes
+  
   useEffect(() => {
-    if (urlEventId && EVENTS.some(e => e.id === urlEventId)) {
-      setActiveEventId(urlEventId)
+    if (urlEventId && EVENTS.some((e) => e.id === urlEventId)) {
+      setActiveEventId(urlEventId);
     } else {
-      // If no valid event ID in URL, check localStorage for last selected
-      const savedEvent = localStorage.getItem('selectedCertificateEvent')
-      if (savedEvent && EVENTS.some(e => e.id === savedEvent)) {
-        setActiveEventId(savedEvent)
+      
+      const savedEvent = localStorage.getItem("selectedCertificateEvent");
+      if (savedEvent && EVENTS.some((e) => e.id === savedEvent)) {
+        setActiveEventId(savedEvent);
       }
     }
-  }, [urlEventId])
+  }, [urlEventId]);
 
-  const activeEvent = EVENTS.find(e => e.id === activeEventId)
+  const activeEvent = EVENTS.find((e) => e.id === activeEventId);
 
   const handleEventChange = (eventId) => {
-    setActiveEventId(eventId)
+    setActiveEventId(eventId);
     if (eventId) {
       // Save to localStorage for persistence
-      localStorage.setItem('selectedCertificateEvent', eventId)
-      navigate(`/certificates/${eventId}`)
+      localStorage.setItem("selectedCertificateEvent", eventId);
+      navigate(`/certificates/${eventId}`);
     } else {
-      localStorage.removeItem('selectedCertificateEvent')
-      navigate('/certificates')
+      localStorage.removeItem("selectedCertificateEvent");
+      navigate("/certificates");
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-[#faf6f0] font-serif mt-24">
@@ -56,12 +63,17 @@ export default function Certificate() {
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: 'repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%)',
-            backgroundSize: '40px 40px',
+            backgroundImage:
+              "repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%)",
+            backgroundSize: "40px 40px",
           }}
         />
-        <span className="absolute left-[6%] top-1/2 -translate-y-1/2 text-[80px] text-[#d4a853] opacity-10 select-none">♟</span>
-        <span className="absolute right-[6%] top-1/2 -translate-y-1/2 text-[80px] text-[#d4a853] opacity-10 select-none">♛</span>
+        <span className="absolute left-[6%] top-1/2 -translate-y-1/2 text-[80px] text-[#d4a853] opacity-10 select-none">
+          ♟
+        </span>
+        <span className="absolute right-[6%] top-1/2 -translate-y-1/2 text-[80px] text-[#d4a853] opacity-10 select-none">
+          ♛
+        </span>
 
         <div className="relative">
           <p className="text-[#d4a853] text-xs tracking-[0.3em] uppercase mb-3">
@@ -101,13 +113,19 @@ export default function Certificate() {
                 </option>
               ))}
             </select>
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#a89070] pointer-events-none text-lg">▼</span>
+            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#a89070] pointer-events-none text-lg">
+              ▼
+            </span>
           </div>
 
           {activeEvent && (
             <div className="mt-6 p-4 bg-[#fffaf5] border border-[#ddd0bf] rounded">
-              <p className="text-[#a89070] text-xs uppercase tracking-wider font-bold mb-1">Selected Event</p>
-              <p className="text-[#2c1a0e] text-base font-serif font-bold">{activeEvent.name}</p>
+              <p className="text-[#a89070] text-xs uppercase tracking-wider font-bold mb-1">
+                Selected Event
+              </p>
+              <p className="text-[#2c1a0e] text-base font-serif font-bold">
+                {activeEvent.name}
+              </p>
             </div>
           )}
         </div>
@@ -117,5 +135,5 @@ export default function Certificate() {
         {activeEvent && <CertificateViewer eventId={activeEvent.id} />}
       </div>
     </div>
-  )
+  );
 }
