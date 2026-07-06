@@ -49,7 +49,7 @@ const events = [
     category: "FIDE Rated",
     brochure: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
     result: null,
-    certificateEventId: null
+    certificateEventId: "state-subjunior-2026"
   },
   {
     id: 5,

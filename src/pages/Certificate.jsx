@@ -20,8 +20,12 @@ const EVENTS = [
     name: "5th Jharkhand State Rapid Chess Championship - 2026",
   },
   {
-    id: 'state-fide-2026',  
-    name: '25th Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship - 2026',
+    id: "state-fide-2026",
+    name: "25th Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship - 2026",
+  },
+  {
+    id: 'state-subjunior-2026', 
+    name: '25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship - 2026',
   },
 ];
 
@@ -30,12 +34,10 @@ export default function Certificate() {
   const navigate = useNavigate();
   const [activeEventId, setActiveEventId] = useState("");
 
-  
   useEffect(() => {
     if (urlEventId && EVENTS.some((e) => e.id === urlEventId)) {
       setActiveEventId(urlEventId);
     } else {
-      
       const savedEvent = localStorage.getItem("selectedCertificateEvent");
       if (savedEvent && EVENTS.some((e) => e.id === savedEvent)) {
         setActiveEventId(savedEvent);
