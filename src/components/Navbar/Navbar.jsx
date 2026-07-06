@@ -94,21 +94,21 @@ const Navbar = () => {
         //     },
         //   ],
         // },
-        // {
-        //   title: "39th National Under-9 Open & Girls Chess Championship 2026",
-        //   items: [
-        //     {
-        //       text: "Brochure",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
-        //     },
-        //     {
-        //       text: "Payment for Accommodation, Boarding & Pick-Drop",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/nrb/",
-        //     },
-        //   ],
-        // },
+        {
+          title: "39th National Under-9 Open & Girls Chess Championship 2026",
+          items: [
+            {
+              text: "Brochure",
+              target: "_blank",
+              link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+            },
+            {
+              text: "Payment for Accommodation, Boarding & Pick-Drop",
+              target: "_blank",
+              link: "https://jharkhandchess.in/nrb/",
+            },
+          ],
+        },
         // {
         //   title: "Under 7-13 Chess Championship 2026",
         //   items: [
