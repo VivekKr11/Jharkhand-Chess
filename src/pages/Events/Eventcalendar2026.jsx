@@ -171,18 +171,18 @@ const events = [
     result: null,
     certificateEventId: "state-fide-girls-2026"
   },
-  {
-    id: 13,
-    name: "5 Jharkhand State Rapid Chess Championship 2026",
-    code: "2026/AJCA/E-15",
-    startDate: "2026-06-20",
-    endDate: "2026-06-21",
-    place: "Ranchi",
-    category: "Rapid",
-    brochure: null,
-    result: null,
-    certificateEventId: "state-rapid-2026"
-  },
+  // {
+  //   id: 13,
+  //   name: "5 Jharkhand State Rapid Chess Championship 2026",
+  //   code: "2026/AJCA/E-15",
+  //   startDate: "2026-06-20",
+  //   endDate: "2026-06-21",
+  //   place: "Ranchi",
+  //   category: "Rapid",
+  //   brochure: null,
+  //   result: null,
+  //   certificateEventId: "state-rapid-2026"
+  // },
   // {
   //   id: 14,
   //   name: "4 Jharkhand State Blitz Chess Championship 2026",
@@ -196,7 +196,7 @@ const events = [
   //   certificateEventId: "state-blitz-2026"
   // },
   // {
-  //   id: 15,
+  //   id: 13,
   //   name: "39th National Under-9 Open and Girls Chess Championships – 2026",
   //   code: "478114/JH/2026 & 478115/JH/2026",
   //   startDate: "2026-07-06",
