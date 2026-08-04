@@ -57,14 +57,49 @@ export default function CertificateViewer({ eventId }) {
   const eventData = CERTIFICATES.events[eventId];
   const categories = eventData?.categories || {};
   const categoryKeys = Object.keys(categories);
+  const shouldHideOpenCategory = eventId !== "state-school-rapid-2025";
+  const visibleCategoryKeys = shouldHideOpenCategory
+    ? categoryKeys.filter((cat) => cat !== "Open")
+    : categoryKeys;
+  const hasImplicitOpenCategory =
+    shouldHideOpenCategory &&
+    visibleCategoryKeys.length === 0 &&
+    categoryKeys.includes("Open");
+  const categoryLabel =
+    hasImplicitOpenCategory && selectedCategory === "Open"
+      ? "this event"
+      : selectedCategory;
 
   // Auto-select first category when event changes
   useEffect(() => {
-    if (categoryKeys.length > 0 && isInitialLoad) {
+    if (!isInitialLoad) return;
+
+    if (visibleCategoryKeys.length > 0) {
+      setSelectedCategory(visibleCategoryKeys[0]);
+      setIsInitialLoad(false);
+      return;
+    }
+
+    if (hasImplicitOpenCategory) {
+      setSelectedCategory("Open");
+      setIsInitialLoad(false);
+      return;
+    }
+
+    if (categoryKeys.length > 0) {
       setSelectedCategory(categoryKeys[0]);
       setIsInitialLoad(false);
+      return;
     }
-  }, [eventId, categoryKeys, isInitialLoad]);
+
+    setSelectedCategory("");
+    setIsInitialLoad(false);
+  }, [
+    isInitialLoad,
+    visibleCategoryKeys,
+    hasImplicitOpenCategory,
+    categoryKeys,
+  ]);
 
   // Reset state when event changes
   useEffect(() => {
@@ -133,42 +168,42 @@ export default function CertificateViewer({ eventId }) {
     <div className="bg-[#faf6f0] font-serif">
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-8">
         {/* Step 2 – Category */}
-        <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-7 h-7 rounded-full bg-[#3d2412] text-[#d4a853] flex items-center justify-center text-sm font-bold shrink-0">
-              2
+        {visibleCategoryKeys.length > 0 && (
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-7 h-7 rounded-full bg-[#3d2412] text-[#d4a853] flex items-center justify-center text-sm font-bold shrink-0">
+                2
+              </div>
+              <h3 className="text-[#2c1a0e] text-sm font-bold uppercase tracking-widest">
+                Select Category
+              </h3>
             </div>
-            <h3 className="text-[#2c1a0e] text-sm font-bold uppercase tracking-widest">
-              Select Category
-            </h3>
-          </div>
 
-          <div className="flex flex-wrap gap-2">
-            {categoryKeys.map((cat) => {
-              const isBoys = cat.toLowerCase().includes("boys");
-              const active = selectedCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => handleCategoryChange(cat)}
-                  className={[
-                    "flex items-center gap-1.5 px-4 py-2 rounded text-sm font-serif border-2 transition-all duration-150",
-                    active
-                      ? "bg-[#3d2412] border-[#d4a853] text-[#d4a853] font-bold shadow-md"
-                      : "bg-white border-[#c4a882] text-[#5a3a1a] hover:border-[#3d2412] hover:bg-[#fdf0e0]",
-                  ].join(" ")}
-                >
-                  {cat !== "Open" && (
+            <div className="flex flex-wrap gap-2">
+              {visibleCategoryKeys.map((cat) => {
+                const isBoys = cat.toLowerCase().includes("boys");
+                const active = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => handleCategoryChange(cat)}
+                    className={[
+                      "flex items-center gap-1.5 px-4 py-2 rounded text-sm font-serif border-2 transition-all duration-150",
+                      active
+                        ? "bg-[#3d2412] border-[#d4a853] text-[#d4a853] font-bold shadow-md"
+                        : "bg-white border-[#c4a882] text-[#5a3a1a] hover:border-[#3d2412] hover:bg-[#fdf0e0]",
+                    ].join(" ")}
+                  >
                     <span className="text-base leading-none">
                       {isBoys ? "♟" : "♛"}
                     </span>
-                  )}
-                  {cat}
-                </button>
-              );
-            })}
+                    {cat}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Step 3 – Search */}
         <div>
@@ -203,7 +238,9 @@ export default function CertificateViewer({ eventId }) {
                 onKeyDown={handleKeyDown}
                 placeholder={
                   selectedCategory
-                    ? `Enter player name in ${selectedCategory}…`
+                    ? hasImplicitOpenCategory
+                      ? "Enter player name…"
+                      : `Enter player name in ${selectedCategory}…`
                     : "Select a category first…"
                 }
                 disabled={!selectedCategory}
@@ -232,8 +269,8 @@ export default function CertificateViewer({ eventId }) {
           {selectedCategory && !searchQuery && !searched && (
             <p className="mt-2 text-[#a89070] text-xs italic">
               Leave blank and click Search to view all{" "}
-              {categories[selectedCategory]?.length} certificates in this
-              category
+              {categories[selectedCategory]?.length} certificates in{" "}
+              {hasImplicitOpenCategory ? "this event" : "this category"}
             </p>
           )}
         </div>
@@ -250,8 +287,13 @@ export default function CertificateViewer({ eventId }) {
                 <span className="ml-2 font-normal normal-case tracking-normal text-[#a89070]">
                   {results.length} certificate{results.length !== 1 ? "s" : ""}{" "}
                   found
-                  {searchQuery && <> for &ldquo;{searchQuery}&rdquo;</>} in{" "}
-                  <em>{selectedCategory}</em>
+                  {searchQuery && <> for &ldquo;{searchQuery}&rdquo;</>}
+                  {!hasImplicitOpenCategory && (
+                    <>
+                      {" "}
+                      in <em>{selectedCategory}</em>
+                    </>
+                  )}
                 </span>
               </h3>
             </div>
@@ -261,7 +303,7 @@ export default function CertificateViewer({ eventId }) {
                 <div className="text-5xl mb-3 text-[#c4a882]">♞</div>
                 <p className="text-[#a89070] text-base italic">
                   No certificates found for &ldquo;{searchQuery}&rdquo; in{" "}
-                  {selectedCategory}
+                  {categoryLabel}
                 </p>
                 <p className="text-[#c4a882] text-sm mt-1">
                   Try a partial name or check spelling
@@ -281,7 +323,7 @@ export default function CertificateViewer({ eventId }) {
                           {name}
                         </p>
                         <p className="text-[#a89070] text-xs mt-0.5">
-                          {selectedCategory} &middot; {eventData.name}
+                          {categoryLabel} &middot; {eventData.name}
                         </p>
                       </div>
                     </div>
