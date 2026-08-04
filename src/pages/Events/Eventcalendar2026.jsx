@@ -17,7 +17,19 @@ const events = [
   },
   {
     id: 2,
-    name: "25 Jharkhand State Under-7 & 11 Open & Girls Chess Championship - 2026",
+    name: "25 Jharkhand State Junior girls Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-08",
+    endDate: "2026-06-10",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/25-JHARKHAND-STATE-JUNIOR-CHESS-CHAMPIONSHIP-2026.pdf",
+    result: null,
+    certificateEventId: "state-junior-girls-2026"
+  },
+  {
+    id: 3,
+    name: "25 Jharkhand State Under-7 Open Chess Championship - 2026",
     code: "2026/AJCA/E-12",
     startDate: "2026-06-10",
     endDate: "2026-06-12",
@@ -25,11 +37,47 @@ const events = [
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
     result: "https://s1.chess-results.com/tnr1435302.aspx?lan=1&art=1&SNode=S0",
-    certificateEventId: null
+    certificateEventId: "state-under7-open-2026"
   },
   {
-    id: 3,
-    name: "25 Jharkhand State Under-9 & 13 Open & Girls Chess Championship - 2026",
+    id: 4,
+    name: "25 Jharkhand State Under-7 Girls Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-10",
+    endDate: "2026-06-12",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: "state-under7-girls-2026"
+  },
+  {
+    id: 5,
+    name: "25 Jharkhand State Under-11 Open Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-10",
+    endDate: "2026-06-12",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: "state-under11-open-2026"
+  },
+  {
+    id: 6,
+    name: "25 Jharkhand State Under-11 Girls Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-10",
+    endDate: "2026-06-12",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: "state-under11-girls-2026"
+  },
+  {
+    id: 7,
+    name: "25 Jharkhand State Under-9 Open Chess Championship - 2026",
     code: "2026/AJCA/E-12",
     startDate: "2026-06-12",
     endDate: "2026-06-14",
@@ -37,10 +85,46 @@ const events = [
     category: "State",
     brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
     result: null,
-    certificateEventId: null
+    certificateEventId: "state-under9-open-2026"
   },
   {
-    id: 4,
+    id: 8,
+    name: "25 Jharkhand State Under-9 Girls Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-12",
+    endDate: "2026-06-14",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: "state-under9-girls-2026"
+  },
+  {
+    id: 9,
+    name: "25 Jharkhand State Under-13 Open Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-12",
+    endDate: "2026-06-14",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: "state-under13-open-2026"
+  },
+  {
+    id: 10,
+    name: "25 Jharkhand State Under-13 Girls Chess Championship - 2026",
+    code: "2026/AJCA/E-12",
+    startDate: "2026-06-12",
+    endDate: "2026-06-14",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
+    result: null,
+    certificateEventId: "state-under13-girls-2026"
+  },
+  {
+    id: 11,
     name: "25 Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship - 2026",
     code: "2026/AJCA/E-13 483595/JH(S)/2026",
     startDate: "2026-06-14",
@@ -52,7 +136,19 @@ const events = [
     certificateEventId: "state-subjunior-2026"
   },
   {
-    id: 5,
+    id: 12,
+    name: "25 Jharkhand State Sub-Junior (Under-15) Girls Chess Championship - 2026",
+    code: "2026/AJCA/E-13 483595/JH(S)/2026",
+    startDate: "2026-06-14",
+    endDate: "2026-06-17",
+    place: "Ranchi",
+    category: "State",
+    brochure: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
+    result: null,
+    certificateEventId: "state-subjunior-girls-2026"
+  },
+  {
+    id: 13,
     name: "25 Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship – 2026",
     code: "2026/AJCA/E-14 & 483574/JH(S)/2026",
     startDate: "2026-06-17",
@@ -64,7 +160,19 @@ const events = [
     certificateEventId: "state-fide-2026"
   },
   {
-    id: 6,
+    id: 14,
+    name: "25 Aditya Birla Memorial Jharkhand State Girls Chess Championship – 2026",
+    code: "2026/AJCA/E-14 & 483574/JH(S)/2026",
+    startDate: "2026-06-17",
+    endDate: "2026-06-20",
+    place: "Ranchi",
+    category: "State",
+    brochure: null,
+    result: null,
+    certificateEventId: "state-fide-girls-2026"
+  },
+  {
+    id: 15,
     name: "5 Jharkhand State Rapid Chess Championship 2026",
     code: "2026/AJCA/E-15",
     startDate: "2026-06-20",
@@ -76,7 +184,7 @@ const events = [
     certificateEventId: "state-rapid-2026"
   },
   {
-    id: 7,
+    id: 16,
     name: "4 Jharkhand State Blitz Chess Championship 2026",
     code: "2026/AJCA/E-16",
     startDate: "2026-06-22",
@@ -88,7 +196,7 @@ const events = [
     certificateEventId: "state-blitz-2026"
   },
   {
-    id: 8,
+    id: 17,
     name: "39th National Under-9 Open and Girls Chess Championships – 2026",
     code: "478114/JH/2026 & 478115/JH/2026",
     startDate: "2026-07-06",

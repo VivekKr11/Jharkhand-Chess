@@ -12,20 +12,68 @@ const EVENTS = [
     name: "25th Jharkhand State Junior Chess Championship 2026 (Open)",
   },
   {
-    id: "state-blitz-2026",
-    name: "4th Jharkhand State Blitz Chess Championship - 2026",
+    id: "state-junior-girls-2026",
+    name: "25th Jharkhand State Junior Chess Championship 2026 (Girls)",
   },
   {
-    id: "state-rapid-2026",
-    name: "5th Jharkhand State Rapid Chess Championship - 2026",
+    id: "state-under7-open-2026",
+    name: "25th Jharkhand State Under-7 Open Chess Championship - 2026",
+  },
+  {
+    id: "state-under7-girls-2026",
+    name: "25th Jharkhand State Under-7 Girls Chess Championship - 2026",
+  },
+  {
+    id: "state-under11-open-2026",
+    name: "25th Jharkhand State Under-11 Open Chess Championship - 2026",
+  },
+  {
+    id: "state-under11-girls-2026",
+    name: "25th Jharkhand State Under-11 Girls Chess Championship - 2026",
+  },
+  {
+    id: "state-under9-open-2026",
+    name: "25th Jharkhand State Under-9 Open Chess Championship - 2026",
+  },
+  {
+    id: "state-under9-girls-2026",
+    name: "25th Jharkhand State Under-9 Girls Chess Championship - 2026",
+  },
+  {
+    id: "state-under13-open-2026",
+    name: "25th Jharkhand State Under-13 Open Chess Championship - 2026",
+  },
+  {
+    id: "state-under13-girls-2026",
+    name: "25th Jharkhand State Under-13 Girls Chess Championship - 2026",
+  },
+  {
+    id: "state-subjunior-2026",
+    name: "25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship - 2026",
+  },
+  {
+    id: "state-subjunior-girls-2026",
+    name: "25th Jharkhand State Sub-Junior (Under-15) Girls Chess Championship - 2026",
   },
   {
     id: "state-fide-2026",
     name: "25th Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship - 2026",
   },
   {
-    id: 'state-subjunior-2026', 
-    name: '25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship - 2026',
+    id: "state-fide-girls-2026",
+    name: "25th Aditya Birla Memorial Jharkhand State Girls Chess Championship - 2026",
+  },
+  {
+    id: "state-rapid-2026",
+    name: "5th Jharkhand State Rapid Chess Championship - 2026",
+  },
+  {
+    id: "state-blitz-2026",
+    name: "4th Jharkhand State Blitz Chess Championship - 2026",
+  },
+  {
+    id: "national-under9-2026",
+    name: "39th National Under-9 Open and Girls Chess Championships – 2026",
   },
 ];
 
