@@ -47,14 +47,14 @@ const EVENTS = [
     id: "state-under13-girls-2026",
     name: "25th Jharkhand State Under-13 Girls Chess Championship - 2026",
   },
-  {
-    id: "state-subjunior-2026",
-    name: "25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship - 2026",
-  },
-  {
-    id: "state-subjunior-girls-2026",
-    name: "25th Jharkhand State Sub-Junior (Under-15) Girls Chess Championship - 2026",
-  },
+  // {
+  //   id: "state-subjunior-2026",
+  //   name: "25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship - 2026",
+  // },
+  // {
+  //   id: "state-subjunior-girls-2026",
+  //   name: "25th Jharkhand State Sub-Junior (Under-15) Girls Chess Championship - 2026",
+  // },
   {
     id: "state-fide-2026",
     name: "25th Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship - 2026",
