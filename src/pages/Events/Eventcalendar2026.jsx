@@ -195,18 +195,18 @@ const events = [
     result: null,
     certificateEventId: "state-blitz-2026"
   },
-  // {
-  //   id: 13,
-  //   name: "39th National Under-9 Open and Girls Chess Championships – 2026",
-  //   code: "478114/JH/2026 & 478115/JH/2026",
-  //   startDate: "2026-07-06",
-  //   endDate: "2026-07-12",
-  //   place: "Ranchi",
-  //   category: "National",
-  //   brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
-  //   result: null,
-  //   certificateEventId: null
-  // },
+  {
+    id: 13,
+    name: "39th National Under-9 Open and Girls Chess Championships – 2026",
+    code: "478114/JH/2026 & 478115/JH/2026",
+    startDate: "2026-07-06",
+    endDate: "2026-07-12",
+    place: "Ranchi",
+    category: "National",
+    brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+    result: null,
+    certificateEventId: null
+  },
 ];
 
 const formatDate = (dateStr) => {
