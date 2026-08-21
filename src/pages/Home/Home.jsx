@@ -32,7 +32,7 @@ const SLIDES = [
   },
 ];
 const data = [
-  "🔔 Important Notification -Last date for Boarding & Transport Registration is 3rd July 2026, 6:00 PM. -Please ensure you complete your registration before the deadline. No requests will be accepted after the closing time.",
+  "Registration is now LIVE for the 2nd Jharkhand State Schools Rapid Open & Girls Chess Championship 2026, scheduled on 30th August — last date to register is 28th August.",
 ];
 
 const Home = () => {
@@ -69,17 +69,17 @@ const Home = () => {
               {/* Buttons */}
               <div className="flex flex-row flex-wrap justify-center md:justify-start items-center gap-3 py-2">
                 {/* Championship Button */}
-                <a href="https://jharkhandchess.in/nrb/" target="_blank" rel="noopener noreferrer">
-                  <button className="bg-[#2C1B16] text-white px-3 py-2 md:px-4 md:py-3 rounded-lg md:rounded-2xl font-bold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105 text-xs md:text-sm min-h-[48px] md:min-h-[64px] w-[225px] md:w-[270px]">
+                <a href="https://jharkhandchess.in/registrationStateSchool.aspx" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-[#2C1B16] text-white px-3 py-2 md:px-4 md:py-3 rounded-lg md:rounded-2xl font-bold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105 text-xs md:text-sm min-h-[48px] md:min-h-[64px] w-[225px] md:w-[320px]">
                     <span className="flex-1 text-center leading-snug">
-                      National Under-9 Open & Girls Chess Championship 2026
+                      2nd Jharkhand State Schools Rapid Open & Girls Chess Championship 2026
                     </span>
                     <img className="h-[15px] md:h-[20px] shrink-0" src="./props/chesspion.svg" alt="" />
                   </button>
                 </a>
 
                 {/* Brochure Button */}
-                <a href="https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf" target="_blank" rel="noopener noreferrer">
+                <a href="https://jharkhandchess.in/pdf/2nd%20Jharkhand%20State%20%20Schools-3_.pdf" target="_blank" rel="noopener noreferrer">
                   <button className="bg-[#2C1B16] text-white px-4 py-2 md:px-6 md:py-3 rounded-lg md:rounded-2xl font-bold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105 text-xs md:text-sm min-h-[48px] md:min-h-[64px] whitespace-nowrap">
                     <span>Brochure</span>
                     <img className="h-[15px] md:h-[20px] shrink-0" src="./props/chesspion.svg" alt="" />
