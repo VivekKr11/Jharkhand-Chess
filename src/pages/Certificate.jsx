@@ -71,6 +71,10 @@ const EVENTS = [
     id: "state-blitz-2026",
     name: "4th Jharkhand State Blitz Chess Championship - 2026",
   },
+  {
+    id: "state-school-blitz-2026",
+    name: "2nd Jharkhand State Schools Rapid Open & Girls Chess Championship - 2026",
+  },
   // {
   //   id: "national-under9-2026",
   //   name: "39th National Under-9 Open and Girls Chess Championships – 2026",

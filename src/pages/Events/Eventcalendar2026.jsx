@@ -196,6 +196,18 @@ const events = [
     certificateEventId: "state-blitz-2026"
   },
   {
+    id: 15,
+    name: "2nd Jharkhand State Schools Rapid Open & Girls Chess Championship - 2026",
+    code: "2026/AJCA/E-18",
+    startDate: "2026-08-30",
+    endDate: "2026-08-30",
+    place: "Ranchi",
+    category: "Rapid",
+    brochure: "https://jharkhandchess.in/pdf/2nd%20Jharkhand%20State%20%20Schools-3_.pdf",
+    result: null,
+    certificateEventId: "state-school-blitz-2026"
+  },
+  {
     id: 13,
     name: "39th National Under-9 Open and Girls Chess Championships – 2026",
     code: "478114/JH/2026 & 478115/JH/2026",
