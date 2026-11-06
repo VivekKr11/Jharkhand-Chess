@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Info = () => {
   return (
@@ -21,6 +22,15 @@ const Info = () => {
           see Jharkhand emerge as a powerhouse in the chess world, producing
           champions who can represent the state with pride.
         </p>
+        <div className="flex justify-center md:justify-center mt-2">
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 bg-[#2C1B16] text-[#E1DBD8] px-6 py-2.5 rounded-xl font-semibold hover:bg-[#3d2412] transition-colors duration-200 shadow-sm text-sm md:text-base"
+          >
+            Read More About AJCA
+            <span className="text-[#d4a853]">→</span>
+          </Link>
+        </div>
       </div>
       <div className="w-full md:w-2/5 flex justify-center items-center">
         <img className="md:h-[400px]" src="./props/board2.png" alt="" />

@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import TermsAndCondition from "./pages/TermsAndCondition";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AboutUs from "./pages/AboutUs";
 import RegistrationForm from "./pages/RegistrationForm";
 import PlayerList from "./pages/PlayerList";
 import Certificate from "./pages/Certificate";
@@ -14,7 +16,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/termsAndCondition" element={<TermsAndCondition />} />
+        <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/registrationform" element={<RegistrationForm />} />
         <Route path="/playerlist" element={<PlayerList />} />
         <Route path="/certificates" element={<Certificate />} />
