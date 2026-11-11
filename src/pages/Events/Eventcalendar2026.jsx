@@ -155,7 +155,7 @@ const events = [
     endDate: "2026-06-20",
     place: "Ranchi",
     category: "FIDE Rated",
-    brochure: null,
+    brochure: "https://jharkhandchess.in/pdf/25th%20Aditya%20Birla%20Memorial%20Jharkhand%20State%20Fide%20Rating%20Open%20%26%20Girls%20Chess%20Championship%E2%80%932026.pdf",
     result: "https://s1.chess-results.com/tnr1439780.aspx?lan=1&art=4&flag=30&SNode=S0",
     certificateEventId: "state-fide-2026"
   },
@@ -167,7 +167,7 @@ const events = [
     endDate: "2026-06-20",
     place: "Ranchi",
     category: "State",
-    brochure: null,
+    brochure: "https://jharkhandchess.in/pdf/25th%20Aditya%20Birla%20Memorial%20Jharkhand%20State%20Fide%20Rating%20Open%20%26%20Girls%20Chess%20Championship%E2%80%932026.pdf",
     result: "https://s1.chess-results.com/tnr1439780.aspx?lan=1&art=4&flag=30&SNode=S0",
     certificateEventId: "state-fide-girls-2026"
   },
@@ -179,7 +179,7 @@ const events = [
     endDate: "2026-06-21",
     place: "Ranchi",
     category: "Rapid",
-    brochure: null,
+    brochure: "https://jharkhandchess.in/pdf/5th%20Rapid%20%26%204th%20Blitz%20Chess%20Championship%202026.pdf",
     result: "https://s3.chess-results.com/tnr1441935.aspx?lan=1&art=4&flag=30&SNode=S0",
     certificateEventId: "state-rapid-2026"
   },
@@ -191,7 +191,7 @@ const events = [
     endDate: "2026-06-22",
     place: "Ranchi",
     category: "Blitz",
-    brochure: null,
+    brochure: "https://jharkhandchess.in/pdf/5th%20Rapid%20%26%204th%20Blitz%20Chess%20Championship%202026.pdf",
     result: "https://s2.chess-results.com/tnr1442961.aspx?lan=1&art=4&flag=30&SNode=S0",
     certificateEventId: "state-blitz-2026"
   },
