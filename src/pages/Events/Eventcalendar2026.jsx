@@ -136,18 +136,6 @@ const events = [
     certificateEventId: "state-subjunior-2026"
   },
   {
-    id: 12,
-    name: "25 Jharkhand State Sub-Junior (Under-15) Girls Chess Championship - 2026",
-    code: "2026/AJCA/E-13 & 483595/JH(S)/2026",
-    startDate: "2026-06-14",
-    endDate: "2026-06-17",
-    place: "Ranchi",
-    category: "State",
-    brochure: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
-    result: "https://s2.chess-results.com/tnr1438138.aspx?lan=1&art=4&flag=30&SNode=S0",
-    certificateEventId: "state-subjunior-girls-2026"
-  },
-  {
     id: 13,
     name: "25 Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship – 2026",
     code: "2026/AJCA/E-14 & 483574/JH(S)/2026",
@@ -158,18 +146,6 @@ const events = [
     brochure: "https://jharkhandchess.in/pdf/25th%20Aditya%20Birla%20Memorial%20Jharkhand%20State%20Fide%20Rating%20Open%20%26%20Girls%20Chess%20Championship%E2%80%932026.pdf",
     result: "https://s1.chess-results.com/tnr1439780.aspx?lan=1&art=4&flag=30&SNode=S0",
     certificateEventId: "state-fide-2026"
-  },
-  {
-    id: 14,
-    name: "25 Aditya Birla Memorial Jharkhand State Girls Chess Championship – 2026",
-    code: "2026/AJCA/E-14 & 483574/JH(S)/2026",
-    startDate: "2026-06-17",
-    endDate: "2026-06-20",
-    place: "Ranchi",
-    category: "State",
-    brochure: "https://jharkhandchess.in/pdf/25th%20Aditya%20Birla%20Memorial%20Jharkhand%20State%20Fide%20Rating%20Open%20%26%20Girls%20Chess%20Championship%E2%80%932026.pdf",
-    result: "https://s1.chess-results.com/tnr1439780.aspx?lan=1&art=4&flag=30&SNode=S0",
-    certificateEventId: "state-fide-girls-2026"
   },
   {
     id: 15,

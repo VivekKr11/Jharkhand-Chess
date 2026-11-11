@@ -11,24 +11,14 @@ import "../../css/embla.css";
 const OPTIONS = { align: "start", loop: true };
 const SLIDES = [
   {
-    number: "100",
-    info: "Registered Players",
-    img: "./gotis/registered.svg",
-  },
-  {
-    number: "100",
-    info: "Tournaments in 2018",
+    title: "Prime Engage Jr. Chess Championship 2026",
     img: "./gotis/tournaments.svg",
+    brochure: "https://jharkhandchess.in/pdf/Prime%20Engage%20Jr.%20Chess%20Championship%202026.pdf",
   },
   {
-    number: "100",
-    info: "International Masters",
-    img: "./gotis/international.svg",
-  },
-  {
-    number: "100",
-    info: "FIDE Rated Players",
-    img: "./gotis/rated.svg",
+    title: "1st Chess GuruCool Jharkhand School Open Chess Tournament 2026",
+    img: "./gotis/tournaments.svg",
+    brochure: "https://jharkhandchess.in/pdf/1st%20Chess%20GuruCool%20Jharkhand%20School%20Open%20Chess%20Tournament%202026.pdf",
   },
   {
     title: "Prime Engage Jr. Chess Championship 2026",
