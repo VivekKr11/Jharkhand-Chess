@@ -62,10 +62,10 @@ const Navbar = () => {
       title: "Information",
       items: [
         { text: "About Us", link: "/about" },
-        { text: "AJCA Office Bearers", link: "#" },
-        { text: "Affiliated Units", link: "#" },
+        { text: "AJCA Office Bearers", link: "/office-bearers" },
+        { text: "Affiliated Units", link: "/affiliated-units" },
         { text: "Committees", link: "#" },
-        { text: "Arbiters", link: "#" },
+        { text: "Arbiters", link: "/arbiters" },
         { text: "Coaches", link: "#" },
         { text: "Download", link: "#" },
         { text: "Certificates", link: "/certificates" },

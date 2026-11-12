@@ -85,6 +85,48 @@ const ImageGallery = () => {
               alt="Fifth Slide"
             />
           </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/events/1.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              alt="25th Jharkhand State Under-7 & Under-11 Open & Girls Chess Championship 2026"
+            />
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/events/2.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              alt="25th Jharkhand State Under-9 & Under-13 Open & Girls Chess Championship 2026"
+            />
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/events/3.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              alt="25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship 2026"
+            />
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/events/4.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              alt="25th Aditya Birla Memorial Jharkhand State FIDE Rating Open & Girls Chess Championship 2026"
+            />
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/events/5.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              alt="5th Jharkhand State Rapid & 4th Blitz Chess Championship 2026"
+            />
+          </div>
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/events/6.jpg"
+              className="absolute inset-0 w-full h-full object-cover"
+              alt="25th Jharkhand State Junior (Under-19) Open & Girls Chess Championship 2026"
+            />
+          </div>
         </div>
         <button
           type="button"
