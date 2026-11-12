@@ -77,26 +77,26 @@ const Navbar = () => {
       title: "Tournament Entry",
       isMultiTournament: true,
       tournaments: [
-        {
-          title: "2nd Jharkhand State Schools Rapid Open & Girls Chess Championship 2026",
-          items: [
-            {
-              text: "Brochure",
-              target: "_blank",
-              link: "https://jharkhandchess.in/pdf/2nd%20Jharkhand%20State%20%20Schools-3_.pdf",
-            },
-            {
-              text: "Registration",
-              target: "_blank",
-              link: "https://jharkhandchess.in/registrationStateSchool.aspx",
-            },
-            {
-              text: "Players List",
-              target: "_blank",
-              link: "https://jharkhandchess.in/registrationStateSchoolList.aspx",
-            },
-          ],
-        },
+        // {
+        //   title: "2nd Jharkhand State Schools Rapid Open & Girls Chess Championship 2026",
+        //   items: [
+        //     {
+        //       text: "Brochure",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/pdf/2nd%20Jharkhand%20State%20%20Schools-3_.pdf",
+        //     },
+        //     {
+        //       text: "Registration",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationStateSchool.aspx",
+        //     },
+        //     {
+        //       text: "Players List",
+        //       target: "_blank",
+        //       link: "https://jharkhandchess.in/registrationStateSchoolList.aspx",
+        //     },
+        //   ],
+        // },
         // {
         //   title: "39th National Under-9 Open & Girls Chess Championship 2026",
         //   items: [
@@ -191,9 +191,8 @@ const Navbar = () => {
                 <button className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors flex items-center gap-1">
                   {dropdown.title}
                   <svg
-                    className={`w-4 h-4 transition-transform duration-200 group-hover:rotate-180 ${
-                      activeDropdown === dropdown.title ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 group-hover:rotate-180 ${activeDropdown === dropdown.title ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -328,9 +327,8 @@ const Navbar = () => {
               >
                 {dropdown.title}
                 <svg
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    activeDropdown === dropdown.title ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === dropdown.title ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -379,9 +377,8 @@ const Navbar = () => {
                         >
                           <span className="pr-2">{tournament.title}</span>
                           <svg
-                            className={`w-3 h-3 transition-transform duration-200 flex-shrink-0 ${
-                              activeSubSubmenu === tournament.title ? "rotate-180" : ""
-                            }`}
+                            className={`w-3 h-3 transition-transform duration-200 flex-shrink-0 ${activeSubSubmenu === tournament.title ? "rotate-180" : ""
+                              }`}
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"

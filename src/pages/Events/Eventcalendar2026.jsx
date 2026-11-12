@@ -180,7 +180,7 @@ const events = [
     place: "Ranchi",
     category: "Rapid",
     brochure: "https://jharkhandchess.in/pdf/2nd%20Jharkhand%20State%20%20Schools-3_.pdf",
-    result: null,
+    result: "https://chess-results.com/fed.aspx?lan=1&fed=IND&bdld1=11",
     certificateEventId: "state-school-blitz-2026"
   },
   {
@@ -445,9 +445,8 @@ const EventList = ({ events, emptyMessage }) => {
               return (
                 <tr
                   key={ev.id}
-                  className={`border-b border-[#2C1B16]/8 transition-colors hover:bg-[#2C1B16]/4 ${
-                    ongoing ? "bg-[#2C1B16]/6" : "bg-white"
-                  }`}
+                  className={`border-b border-[#2C1B16]/8 transition-colors hover:bg-[#2C1B16]/4 ${ongoing ? "bg-[#2C1B16]/6" : "bg-white"
+                    }`}
                 >
                   <td className="px-5 py-4 text-[#815b4f]/60 font-mono text-xs">
                     {String(idx + 1).padStart(2, "0")}
@@ -549,8 +548,8 @@ const EventList = ({ events, emptyMessage }) => {
                   {ev.startDate && ev.endDate
                     ? `${formatDate(ev.startDate)} → ${formatDate(ev.endDate)}`
                     : ev.startDate
-                    ? formatDate(ev.startDate)
-                    : "Dates TBD"}
+                      ? formatDate(ev.startDate)
+                      : "Dates TBD"}
                 </span>
                 {ev.startDate && ev.endDate && (
                   <span className="flex items-center gap-1.5 text-[#815b4f]">
@@ -640,21 +639,19 @@ const CategorySection = ({ title, group, icon }) => {
       <div className="flex justify-center gap-2 mb-8">
         <button
           onClick={() => setView("upcoming")}
-          className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider transition-colors ${
-            view === "upcoming"
+          className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider transition-colors ${view === "upcoming"
               ? "bg-[#2C1B16] text-[#FDF6EF]"
               : "bg-[#2C1B16]/5 text-[#815b4f] hover:bg-[#2C1B16]/10"
-          }`}
+            }`}
         >
           Upcoming &amp; Ongoing ({upcoming.length})
         </button>
         <button
           onClick={() => setView("past")}
-          className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider transition-colors ${
-            view === "past"
+          className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider transition-colors ${view === "past"
               ? "bg-[#2C1B16] text-[#FDF6EF]"
               : "bg-[#2C1B16]/5 text-[#815b4f] hover:bg-[#2C1B16]/10"
-          }`}
+            }`}
         >
           Past Events ({past.length})
         </button>

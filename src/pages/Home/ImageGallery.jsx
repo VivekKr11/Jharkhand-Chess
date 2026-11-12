@@ -87,44 +87,44 @@ const ImageGallery = () => {
           </div>
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/events/1.jpg"
+              src="/Gallery/gallery1.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              alt="25th Jharkhand State Under-7 & Under-11 Open & Girls Chess Championship 2026"
+              alt="Gallery Slide 1"
             />
           </div>
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/events/2.jpg"
+              src="/Gallery/gallery2.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              alt="25th Jharkhand State Under-9 & Under-13 Open & Girls Chess Championship 2026"
+              alt="Gallery Slide 2"
             />
           </div>
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/events/3.jpg"
+              src="/Gallery/gallery3.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              alt="25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship 2026"
+              alt="Gallery Slide 3"
             />
           </div>
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/events/4.jpg"
+              src="/Gallery/gallery4.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              alt="25th Aditya Birla Memorial Jharkhand State FIDE Rating Open & Girls Chess Championship 2026"
+              alt="Gallery Slide 4"
             />
           </div>
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/events/5.jpg"
+              src="/Gallery/gallery5.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              alt="5th Jharkhand State Rapid & 4th Blitz Chess Championship 2026"
+              alt="Gallery Slide 5"
             />
           </div>
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src="/events/6.jpg"
+              src="/Gallery/gallery6.jpg"
               className="absolute inset-0 w-full h-full object-cover"
-              alt="25th Jharkhand State Junior (Under-19) Open & Girls Chess Championship 2026"
+              alt="Gallery Slide 6"
             />
           </div>
         </div>
