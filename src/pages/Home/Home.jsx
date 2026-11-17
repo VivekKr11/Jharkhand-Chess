@@ -43,7 +43,7 @@ const Home = () => {
         <div className="container mx-auto flex-grow">
           {/* Hero: two-column on desktop, single column on mobile */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full relative">
-            
+
             {/* Left: Text + Buttons */}
             <div className="flex flex-col p-3 w-full md:w-[48%] lg:w-[45%] h-full  mt-5">
               <div className="mt-20 md:mt-28 mb-2 md:mb-6 font-playfair justify-center md:text-left text-center">
@@ -118,7 +118,7 @@ const Home = () => {
         <div className="flex flex-col justify-end h-full z-50 relative">
           <div className="flex">
             <div className="bg-[#2C1B16] text-white text-xs md:text-lg md:py-2 py-1 px-2 whitespace-nowrap">
-              Latest News
+              Latest Updates
             </div>
             <div
               id="Headline-div"

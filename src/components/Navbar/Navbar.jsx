@@ -67,7 +67,7 @@ const Navbar = () => {
         { text: "Committees", link: "#" },
         { text: "Arbiters", link: "/arbiters" },
         { text: "Coaches", link: "#" },
-        { text: "Download", link: "#" },
+        { text: "Download", link: "/downloads" },
         { text: "Certificates", link: "/certificates" },
         { text: "Privacy Policy", link: "/privacyPolicy" },
         { text: "Terms & Conditions", link: "/termsAndCondition" },
@@ -288,9 +288,12 @@ const Navbar = () => {
 
         {/* Desktop Contact Button */}
         <div className="hidden md:flex items-center">
-          <button className="bg-[#E1DBD8] p-3 rounded-xl shadow-lg font-bold cursor-pointer text-[#2C1B16] hover:text-[#E1DBD8] hover:bg-[#2C1B16] transition-colors duration-300 text-lg">
+          <Link
+            to="/contact"
+            className="bg-[#E1DBD8] p-3 rounded-xl shadow-lg font-bold cursor-pointer text-[#2C1B16] hover:text-[#E1DBD8] hover:bg-[#2C1B16] transition-colors duration-300 text-lg inline-block"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Menu */}
@@ -442,9 +445,13 @@ const Navbar = () => {
             </a>
           </div>
 
-          <button className="w-full mt-4 bg-[#2C1B16] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#E1DBD8] hover:bg-[#3a2a24] transition-colors duration-300">
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+            className="w-full mt-4 bg-[#2C1B16] p-3 rounded-2xl shadow-lg font-bold cursor-pointer text-[#E1DBD8] hover:bg-[#3a2a24] transition-colors duration-300 text-center block text-lg"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
       )}
     </nav>

@@ -12,6 +12,8 @@ import EventCalendar2026 from "./pages/Events/Eventcalendar2026";
 import OfficeBearers from "./pages/OfficeBearers";
 import Arbiters from "./pages/Arbiters";
 import AffiliatedUnits from "./pages/AffiliatedUnits";
+import Downloads from "./pages/Downloads";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -22,11 +24,16 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/contactus" element={<ContactUs />} />
         <Route path="/office-bearers" element={<OfficeBearers />} />
         <Route path="/officebearers" element={<OfficeBearers />} />
         <Route path="/arbiters" element={<Arbiters />} />
         <Route path="/affiliated-units" element={<AffiliatedUnits />} />
         <Route path="/affiliatedunits" element={<AffiliatedUnits />} />
+        <Route path="/downloads" element={<Downloads />} />
+        <Route path="/download" element={<Downloads />} />
         <Route path="/termsAndCondition" element={<TermsAndCondition />} />
         <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
