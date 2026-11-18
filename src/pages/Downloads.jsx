@@ -35,7 +35,7 @@ const DOWNLOAD_DOCUMENTS = [
     fileName: "AJCA_BID_FORM_STATE_CHAMPIONSHIP.pdf",
     category: "Bidding & Hosting",
     description:
-      "Official bidding form for district units and organizers wishing to host Jharkhand State Chess Championships.",
+      "Official application form for district units and organizers wishing to host Jharkhand State Chess Championships.",
     url: "https://jharkhandchess.in/pdf/AJCA_BID_FORM_STATE_CHAMPIONSHIP.pdf",
     format: "PDF",
   },
@@ -45,7 +45,7 @@ const DOWNLOAD_DOCUMENTS = [
     fileName: "AJCA_BID_FORM_STATE TOURNAMENT.pdf",
     category: "Bidding & Hosting",
     description:
-      "Official bidding and approval application form for organizing recognized state-level chess tournaments in Jharkhand.",
+      "Official approval application form for organizing recognized state-level chess tournaments in Jharkhand.",
     url: "https://jharkhandchess.in/pdf/AJCA_BID_FORM_STATE%20TOURNAMENT.pdf",
     format: "PDF",
   },

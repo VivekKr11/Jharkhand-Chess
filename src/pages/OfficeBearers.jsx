@@ -43,33 +43,33 @@ const OFFICE_BEARERS = [
   },
   {
     srNo: 7,
-    post: "Co-ordinator",
-    name: "Prabhat Ranjan Kumar",
-    image: "/Office bearers/Prabhat Kumar Ranjan.jpeg",
-  },
-  {
-    srNo: 8,
     post: "Joint Secretary",
     name: "Deepak Kumar",
     image: "/Office bearers/Deepak Kumar.jpg.jpeg",
   },
   {
-    srNo: 9,
+    srNo: 8,
     post: "Joint Secretary",
     name: "Anil Kumar Singh",
     image: "/Office bearers/Anil Kumar Singh.jpeg",
   },
   {
-    srNo: 10,
+    srNo: 9,
     post: "Joint Secretary",
     name: "Binod Kumar Saw",
     image: "/Office bearers/Binod Kumar Saw.jpg.jpeg",
   },
   {
-    srNo: 11,
+    srNo: 10,
     post: "Joint Secretary",
     name: "Sujit Kumar Singh",
     image: "/Office bearers/Sujit Kumar Singh.jpeg",
+  },
+  {
+    srNo: 11,
+    post: "Co-ordinator",
+    name: "Prabhat Ranjan Kumar",
+    image: "/Office bearers/Prabhat Kumar Ranjan.jpeg",
   },
   {
     srNo: 12,

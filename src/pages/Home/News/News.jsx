@@ -22,44 +22,6 @@ import "./styles.css";
 const FEATURED_EVENTS = [
   {
     id: 1,
-    image: "/events/1.jpg",
-    badge: "National Championship",
-    title: "39th National Under-9 Open & Girls Chess Championship – 2026",
-    eventCode: "AICF: 478114/JH/2026 (Open) & 478115/JH/2026 (Girls)",
-    date: "6th – 12th July 2026",
-    venue: "Sarala Birla Public School, Mahilong, Ranchi, Jharkhand",
-    shortVenue: "Sarala Birla Public School, Ranchi",
-    participants: "430 Players (271 Open & 159 Girls)",
-    format: "Swiss System | 90 min + 30 sec increment (FIDE Regulations)",
-    shortDesc:
-      "National-level championship organized by AJCA featuring 430 young chess talents from across India.",
-    winners: [
-      {
-        category: "Open Category",
-        list: ["Champion: Rayaan Mikael Rozario"],
-      },
-      {
-        category: "Girls Category",
-        list: ["Champion: Nandi Pritika"],
-      },
-    ],
-    officials: [
-      "Tournament Director: Mr. Satish Kumar",
-      "Chief Arbiter: IA Asit Baran Choudhury",
-      "Deputy Chief Arbiters: IA Deepak Kumar Narendra, IA Jayant Kumar Bhuyan",
-      "Pairing Arbiter: IA Vishal Kumar Minz",
-      "Arbiters: SNA Arun Kumar, SNA Shubham Ashok Singh, SNA Abhinay Kumar Mandal, SNA Satish Kumar, SNA Deepak Kumar Jha, SNA Ashok Kumar Singh, SNA Manoj Kumar, SNA Apurba Chakraborty, SNA Sunil Kumar Singh",
-    ],
-    paragraphs: [
-      "The 39th National Under-9 Open & Girls Chess Championship – 2026 was organized by the All Jharkhand Chess Association from 6th to 12th July 2026 at Sarala Birla Public School, Mahilong, Ranchi, Jharkhand.",
-      "The prestigious national-level championship witnessed an overwhelming participation of 430 young chess players, comprising 271 players in the Open Category and 159 players in the Girls Category, representing different states and regions of the country.",
-      "The tournament was conducted under the Swiss System with a time control of 90 minutes plus a 30-second increment from move one, in accordance with FIDE regulations.",
-      "The championship was a significant milestone for chess in Jharkhand, bringing together some of the finest young chess talents from across India and highlighting Jharkhand's growing contribution to the development and promotion of chess.",
-      "The All Jharkhand Chess Association extends its heartfelt congratulations to Open Champion Rayaan Mikael Rozario and Girls Champion Nandi Pritika, along with all participating players, and expresses sincere gratitude to AICF, tournament officials, arbiters, participating state associations, parents, Sarala Birla Public School, and all supporters.",
-    ],
-  },
-  {
-    id: 2,
     image: "/events/2.jpg",
     badge: "State Championship",
     title: "25th Jharkhand State Junior Chess Championship – 2026",
@@ -104,7 +66,7 @@ const FEATURED_EVENTS = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     image: "/events/3.jpg",
     badge: "State Championship",
     title:
@@ -147,7 +109,7 @@ const FEATURED_EVENTS = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     image: "/events/4.jpg",
     badge: "State Championship",
     title:
@@ -190,9 +152,9 @@ const FEATURED_EVENTS = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     image: "/events/5.jpg",
-    badge: "FIDE Rated",
+    badge: "State Championship",
     title:
       "25th Jharkhand State Sub-Junior (Under-15) FIDE Rating Chess Championship – 2026",
     eventCode: "AICF: 483595/JH(S)/2026 | AJCA: 2026/AJCA/E-13",
@@ -240,9 +202,9 @@ const FEATURED_EVENTS = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     image: "/events/6.jpg",
-    badge: "FIDE Rated",
+    badge: "State Championship",
     title:
       "25th Aditya Birla Memorial Jharkhand State FIDE Rating Chess Championship – 2026",
     eventCode: "AICF: 483574/JH(S)/2026 | AJCA: 2026/AJCA/E-14",
@@ -278,8 +240,8 @@ const FEATURED_EVENTS = [
     ],
   },
   {
-    id: 7,
-    image: "/events/7.jpg",
+    id: 6,
+    image: null,
     badge: "State Championship",
     title: "5th Jharkhand State Rapid Chess Championship – 2026",
     eventCode: "2026/AJCA/E-15",
@@ -316,8 +278,8 @@ const FEATURED_EVENTS = [
     ],
   },
   {
-    id: 8,
-    image: "/events/8.jpeg",
+    id: 7,
+    image: null,
     badge: "State Championship",
     title: "4th Jharkhand State Blitz Chess Championship – 2026",
     eventCode: "2026/AJCA/E-16",
@@ -351,6 +313,44 @@ const FEATURED_EVENTS = [
       "The 4th Jharkhand State Blitz Chess Championship – 2026 concluded successfully with exciting and competitive games. The championship provided an excellent platform for players to demonstrate their tactical strength, alertness, quick calculation, and ability to make accurate decisions under extreme time pressure.",
       "The event further contributed to the promotion and development of blitz chess in Jharkhand and encouraged greater participation in competitive chess.",
       "The All Jharkhand Chess Association congratulates the champion, runner-up, and all participants and extends its sincere gratitude to the tournament officials, arbiters, players, parents, and Sarala Birla University for their valuable cooperation and support in making the championship a success.",
+    ],
+  },
+  {
+    id: 8,
+    image: "/events/1.jpg",
+    badge: "National Championship",
+    title: "39th National Under-9 Open & Girls Chess Championship – 2026",
+    eventCode: "AICF: 478114/JH/2026 (Open) & 478115/JH/2026 (Girls)",
+    date: "6th – 12th July 2026",
+    venue: "Sarala Birla Public School, Mahilong, Ranchi, Jharkhand",
+    shortVenue: "Sarala Birla Public School, Ranchi",
+    participants: "430 Players (271 Open & 159 Girls)",
+    format: "Swiss System | 90 min + 30 sec increment (FIDE Regulations)",
+    shortDesc:
+      "National-level championship organized by AJCA featuring 430 young chess talents from across India.",
+    winners: [
+      {
+        category: "Open Category",
+        list: ["Champion: Rayaan Mikael Rozario"],
+      },
+      {
+        category: "Girls Category",
+        list: ["Champion: Nandi Pritika"],
+      },
+    ],
+    officials: [
+      "Tournament Director: Mr. Satish Kumar",
+      "Chief Arbiter: IA Asit Baran Choudhury",
+      "Deputy Chief Arbiters: IA Deepak Kumar Narendra, IA Jayant Kumar Bhuyan",
+      "Pairing Arbiter: IA Vishal Kumar Minz",
+      "Arbiters: SNA Arun Kumar, SNA Shubham Ashok Singh, SNA Abhinay Kumar Mandal, SNA Satish Kumar, SNA Deepak Kumar Jha, SNA Ashok Kumar Singh, SNA Manoj Kumar, SNA Apurba Chakraborty, SNA Sunil Kumar Singh",
+    ],
+    paragraphs: [
+      "The 39th National Under-9 Open & Girls Chess Championship – 2026 was organized by the All Jharkhand Chess Association from 6th to 12th July 2026 at Sarala Birla Public School, Mahilong, Ranchi, Jharkhand.",
+      "The prestigious national-level championship witnessed an overwhelming participation of 430 young chess players, comprising 271 players in the Open Category and 159 players in the Girls Category, representing different states and regions of the country.",
+      "The tournament was conducted under the Swiss System with a time control of 90 minutes plus a 30-second increment from move one, in accordance with FIDE regulations.",
+      "The championship was a significant milestone for chess in Jharkhand, bringing together some of the finest young chess talents from across India and highlighting Jharkhand's growing contribution to the development and promotion of chess.",
+      "The All Jharkhand Chess Association extends its heartfelt congratulations to Open Champion Rayaan Mikael Rozario and Girls Champion Nandi Pritika, along with all participating players, and expresses sincere gratitude to AICF, tournament officials, arbiters, participating state associations, parents, Sarala Birla Public School, and all supporters.",
     ],
   },
 ];
@@ -469,19 +469,30 @@ export default function News() {
               >
                 {/* Card Image */}
                 <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-[#2C1B16]/10">
-                  <img
-                    src={ev.image}
-                    alt={ev.title}
-                    onError={(e) => {
-                      if (e.target.src.endsWith(".jpg")) {
-                        e.target.src = e.target.src.replace(".jpg", ".jpeg");
-                      } else if (e.target.src.endsWith(".jpeg")) {
-                        e.target.src = e.target.src.replace(".jpeg", ".jpg");
-                      }
-                    }}
-                    className="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B16]/75 via-transparent to-black/20" />
+                  {ev.image ? (
+                    <img
+                      src={ev.image}
+                      alt={ev.title}
+                      onError={(e) => {
+                        if (e.target.src.endsWith(".jpg")) {
+                          e.target.src = e.target.src.replace(".jpg", ".jpeg");
+                        } else if (e.target.src.endsWith(".jpeg")) {
+                          e.target.src = e.target.src.replace(".jpeg", ".jpg");
+                        }
+                      }}
+                      className="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#2C1B16] via-[#3d241d] to-[#1f120a] text-[#d4a853] p-4 text-center">
+                      <div className="w-16 h-16 rounded-2xl bg-white/10 border border-[#d4a853]/40 flex items-center justify-center shadow-inner mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Trophy className="w-8 h-8 text-[#d4a853]" />
+                      </div>
+                      <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#d4a853]">
+                        AJCA Championship
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B16]/75 via-transparent to-black/20 pointer-events-none" />
 
                   <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#2C1B16]/90 text-[#d4a853] backdrop-blur-sm border border-[#d4a853]/30">
                     {ev.badge}
@@ -572,20 +583,31 @@ export default function News() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Hero Banner */}
-            <div className="relative h-56 sm:h-72 shrink-0 bg-[#2C1B16]">
-              <img
-                src={selectedEvent.image}
-                alt={selectedEvent.title}
-                onError={(e) => {
-                  if (e.target.src.endsWith(".jpg")) {
-                    e.target.src = e.target.src.replace(".jpg", ".jpeg");
-                  } else if (e.target.src.endsWith(".jpeg")) {
-                    e.target.src = e.target.src.replace(".jpeg", ".jpg");
-                  }
-                }}
-                className="w-full h-full object-cover object-[center_35%] opacity-90"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B16] via-[#2C1B16]/50 to-black/30" />
+            <div className="relative h-56 sm:h-72 shrink-0 bg-[#2C1B16] overflow-hidden">
+              {selectedEvent.image ? (
+                <img
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  onError={(e) => {
+                    if (e.target.src.endsWith(".jpg")) {
+                      e.target.src = e.target.src.replace(".jpg", ".jpeg");
+                    } else if (e.target.src.endsWith(".jpeg")) {
+                      e.target.src = e.target.src.replace(".jpeg", ".jpg");
+                    }
+                  }}
+                  className="w-full h-full object-cover object-[center_35%] opacity-90"
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#2c1a0e] via-[#432918] to-[#1f120a] text-[#d4a853] pb-14 sm:pb-16">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/10 border border-[#d4a853]/40 flex items-center justify-center shadow-lg mb-2">
+                    <Trophy className="w-8 h-8 sm:w-10 sm:h-10 text-[#d4a853]" />
+                  </div>
+                  <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#d4a853]">
+                    Official Championship Report
+                  </span>
+                </div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B16] via-[#2C1B16]/50 to-black/30 pointer-events-none" />
 
               {/* Close Button */}
               <button
