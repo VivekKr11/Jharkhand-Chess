@@ -277,6 +277,82 @@ const FEATURED_EVENTS = [
       "The All Jharkhand Chess Association congratulates all the winners and participants and expresses its sincere gratitude to the tournament officials, arbiters, players, parents, and Sarala Birla University for their valuable cooperation and support.",
     ],
   },
+  {
+    id: 7,
+    image: "/events/7.jpg",
+    badge: "State Championship",
+    title: "5th Jharkhand State Rapid Chess Championship – 2026",
+    eventCode: "2026/AJCA/E-15",
+    date: "20th – 21st June 2026",
+    venue: "Sarala Birla University, Mahilong, Ranchi, Jharkhand",
+    shortVenue: "Sarala Birla University, Ranchi",
+    participants: "109 Players",
+    format: "Swiss System | 15 min + 10 sec increment",
+    shortDesc:
+      "109 players competed in the rapid chess format, won by Champion Abhishek Das and Runner-up Tanishk Kumar.",
+    winners: [
+      {
+        category: "Final Results – Top Two Players",
+        list: [
+          "Abhishek Das – Champion",
+          "Tanishk Kumar – Runner-up",
+        ],
+      },
+    ],
+    officials: [
+      "Tournament Director: IA Deepak Kumar",
+      "Chief Arbiter: IA Jayant Kumar Bhuyan",
+      "Deputy Chief Arbiter: IA Vishal Kumar Minz",
+      "Sector Arbiter: FA Vikram Kumar",
+      "Arbiters: SNA Binod Kumar Saw, SNA Arun Kumar, SNA Shubham Ashok Singh",
+    ],
+    paragraphs: [
+      "The 5th Jharkhand State Rapid Chess Championship – 2026 was organized by the All Jharkhand Chess Association on 20th and 21st June 2026 at Sarala Birla University, Mahilong, Ranchi, Jharkhand.",
+      "The championship witnessed enthusiastic participation from 109 players, bringing together chess enthusiasts from across the state to compete in the rapid chess format and showcase their tactical skills, quick decision-making, and competitive spirit.",
+      "The tournament was conducted under the Swiss System with a time control of 15 minutes plus a 10-second increment from move one.",
+      "The 5th Jharkhand State Rapid Chess Championship – 2026 concluded successfully with exciting games and impressive performances from the participating players. The championship provided an excellent platform for players to demonstrate their tactical abilities, calculation skills, and decision-making under time pressure.",
+      "The event further contributed to the promotion and development of rapid chess in Jharkhand, encouraging players of different age groups and experience levels to participate in competitive chess.",
+      "The All Jharkhand Chess Association congratulates the champion, runner-up, and all participants and extends its sincere gratitude to the tournament officials, arbiters, players, parents, and Sarala Birla University for their valuable cooperation and support in making the championship a success.",
+    ],
+  },
+  {
+    id: 8,
+    image: "/events/8.jpeg",
+    badge: "State Championship",
+    title: "4th Jharkhand State Blitz Chess Championship – 2026",
+    eventCode: "2026/AJCA/E-16",
+    date: "22nd June 2026",
+    venue: "Sarala Birla University, Mahilong, Ranchi, Jharkhand",
+    shortVenue: "Sarala Birla University, Ranchi",
+    participants: "97 Players",
+    format: "Swiss System | 3 min + 2 sec increment",
+    shortDesc:
+      "97 players showcased tactical reflexes in the blitz chess format, won by Champion Vibhash Kumar Sinha and Runner-up Ankit Kumar Singh.",
+    winners: [
+      {
+        category: "Final Results – Top Two Players",
+        list: [
+          "Vibhash Kumar Sinha – Champion",
+          "Ankit Kumar Singh – Runner-up",
+        ],
+      },
+    ],
+    officials: [
+      "Tournament Director: IA Deepak Kumar",
+      "Chief Arbiter: IA Jayant Kumar Bhuyan",
+      "Deputy Chief Arbiter: IA Vishal Kumar Minz",
+      "Sector Arbiter: FA Vikram Kumar",
+      "Arbiters: SNA Arun Kumar, SNA Shubham Ashok Singh",
+    ],
+    paragraphs: [
+      "The 4th Jharkhand State Blitz Chess Championship – 2026 was organized by the All Jharkhand Chess Association on 22nd June 2026 at Sarala Birla University, Mahilong, Ranchi, Jharkhand.",
+      "The championship witnessed enthusiastic participation from 97 players, bringing together chess enthusiasts from across the state to compete in the fast-paced blitz format and showcase their tactical skills, quick thinking, and decision-making abilities.",
+      "The tournament was conducted under the Swiss System with a time control of 3 minutes plus a 2-second increment from move one.",
+      "The 4th Jharkhand State Blitz Chess Championship – 2026 concluded successfully with exciting and competitive games. The championship provided an excellent platform for players to demonstrate their tactical strength, alertness, quick calculation, and ability to make accurate decisions under extreme time pressure.",
+      "The event further contributed to the promotion and development of blitz chess in Jharkhand and encouraged greater participation in competitive chess.",
+      "The All Jharkhand Chess Association congratulates the champion, runner-up, and all participants and extends its sincere gratitude to the tournament officials, arbiters, players, parents, and Sarala Birla University for their valuable cooperation and support in making the championship a success.",
+    ],
+  },
 ];
 
 export default function News() {
@@ -396,6 +472,13 @@ export default function News() {
                   <img
                     src={ev.image}
                     alt={ev.title}
+                    onError={(e) => {
+                      if (e.target.src.endsWith(".jpg")) {
+                        e.target.src = e.target.src.replace(".jpg", ".jpeg");
+                      } else if (e.target.src.endsWith(".jpeg")) {
+                        e.target.src = e.target.src.replace(".jpeg", ".jpg");
+                      }
+                    }}
                     className="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B16]/75 via-transparent to-black/20" />
@@ -493,6 +576,13 @@ export default function News() {
               <img
                 src={selectedEvent.image}
                 alt={selectedEvent.title}
+                onError={(e) => {
+                  if (e.target.src.endsWith(".jpg")) {
+                    e.target.src = e.target.src.replace(".jpg", ".jpeg");
+                  } else if (e.target.src.endsWith(".jpeg")) {
+                    e.target.src = e.target.src.replace(".jpeg", ".jpg");
+                  }
+                }}
                 className="w-full h-full object-cover object-[center_35%] opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B16] via-[#2C1B16]/50 to-black/30" />
