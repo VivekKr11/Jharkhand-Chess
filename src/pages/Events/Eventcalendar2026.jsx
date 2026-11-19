@@ -185,14 +185,28 @@ const events = [
   },
   {
     id: 18,
-    name: "39th National Under-9 Open and Girls Chess Championships – 2026",
-    code: "478114/JH/2026 & 478115/JH/2026",
+    name: "39th National Under - 9 Open Chess Championship 2026",
+    code: "478114/JH/2026",
     startDate: "2026-07-06",
     endDate: "2026-07-12",
     place: "Ranchi",
     category: "National",
     brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
-    result: null,
+    result: "https://s1.chess-results.com/tnr1423783.aspx?lan=1&art=4&SNode=S0",
+    certificateUrl: "https://aicf.in/certificate-of-national-under-09-chess-championship-2026-in-ranchi-jharkhand-from-06-12-july-2026/",
+    certificateEventId: null
+  },
+  {
+    id: 181,
+    name: "39th National Under - 9 Girls Chess Championship 2026",
+    code: "478115/JH/2026",
+    startDate: "2026-07-06",
+    endDate: "2026-07-12",
+    place: "Ranchi",
+    category: "National",
+    brochure: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
+    result: "https://s3.chess-results.com/tnr1444641.aspx?lan=1&art=4&flag=30&SNode=S0",
+    certificateUrl: "https://aicf.in/certificate-of-national-under-09-chess-championship-2026-in-ranchi-jharkhand-from-06-12-july-2026/",
     certificateEventId: null
   },
   {
@@ -496,7 +510,18 @@ const EventList = ({ events, emptyMessage }) => {
                     )}
                   </td>
                   <td className="px-5 py-4 text-center whitespace-nowrap">
-                    {hasCertificates ? (
+                    {ev.certificateUrl || ev.certificate ? (
+                      <a
+                        href={ev.certificateUrl || ev.certificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d4a853] bg-[#2C1B16] hover:bg-[#3d2412] px-3 py-1.5 rounded-md transition-colors"
+                      >
+                        <Award className="w-3.5 h-3.5" />
+                        View
+                        <PdfIcon />
+                      </a>
+                    ) : hasCertificates ? (
                       <button
                         onClick={() => handleViewCertificates(ev.certificateEventId)}
                         className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d4a853] bg-[#2C1B16] hover:bg-[#3d2412] px-3 py-1.5 rounded-md transition-colors"
@@ -586,7 +611,17 @@ const EventList = ({ events, emptyMessage }) => {
                     View Result
                   </a>
                 )}
-                {hasCertificates && (
+                {ev.certificateUrl || ev.certificate ? (
+                  <a
+                    href={ev.certificateUrl || ev.certificate}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4a853] bg-[#2C1B16] hover:bg-[#3d2412] flex-1 min-w-[120px] px-4 py-2.5 rounded-lg transition-colors text-center"
+                  >
+                    <Award className="w-4 h-4" />
+                    View Certificates
+                  </a>
+                ) : hasCertificates ? (
                   <button
                     onClick={() => handleViewCertificates(ev.certificateEventId)}
                     className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4a853] bg-[#2C1B16] hover:bg-[#3d2412] flex-1 min-w-[120px] px-4 py-2.5 rounded-lg transition-colors text-center"
@@ -594,7 +629,7 @@ const EventList = ({ events, emptyMessage }) => {
                     <Award className="w-4 h-4" />
                     View Certificates
                   </button>
-                )}
+                ) : null}
               </div>
             </div>
           );
@@ -605,11 +640,11 @@ const EventList = ({ events, emptyMessage }) => {
 };
 
 const CategorySection = ({ title, group, icon }) => {
-  const [view, setView] = useState("upcoming");
-
   const grouped = events.filter((ev) => getGroup(ev) === group);
   const upcoming = grouped.filter((ev) => !isPastEvent(ev.endDate, ev));
   const past = grouped.filter((ev) => isPastEvent(ev.endDate, ev));
+
+  const [view, setView] = useState(upcoming.length > 0 ? "upcoming" : "past");
 
   const renderIcon = (className) => {
     if (icon === "crown") return <CrownIcon className={className} />;
