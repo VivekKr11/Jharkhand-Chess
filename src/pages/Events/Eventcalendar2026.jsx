@@ -319,14 +319,50 @@ const events = [
   },
   {
     id: 28,
-    name: "Prime Engage Jr. Chess Championship 2026",
+    name: "Prime Engage Jr. Chess Championship 2026 (Under - 8)",
     code: "2026/AJCA/E-24",
     startDate: "2026-11-22",
     endDate: "2026-11-22",
     place: "Ranchi",
     category: "Other",
     brochure: "https://jharkhandchess.in/pdf/Prime%20Engage%20Jr.%20Chess%20Championship%202026.pdf",
-    result: null,
+    result: "https://s3.chess-results.com/tnr1533308.aspx?lan=1&art=1&rd=6&SNode=S0",
+    certificateEventId: null
+  },
+  {
+    id: 282,
+    name: "Prime Engage Jr. Chess Championship 2026 (Under - 10)",
+    code: "2026/AJCA/E-24",
+    startDate: "2026-11-22",
+    endDate: "2026-11-22",
+    place: "Ranchi",
+    category: "Other",
+    brochure: "https://jharkhandchess.in/pdf/Prime%20Engage%20Jr.%20Chess%20Championship%202026.pdf",
+    result: "https://s3.chess-results.com/tnr1533305.aspx?lan=1&art=1&rd=6&SNode=S0",
+    certificateEventId: null
+  },
+  {
+    id: 283,
+    name: "Prime Engage Jr. Chess Championship 2026 (Under - 12)",
+    code: "2026/AJCA/E-24",
+    startDate: "2026-11-22",
+    endDate: "2026-11-22",
+    place: "Ranchi",
+    category: "Other",
+    brochure: "https://jharkhandchess.in/pdf/Prime%20Engage%20Jr.%20Chess%20Championship%202026.pdf",
+    result: "https://s2.chess-results.com/tnr1533307.aspx?lan=1&art=1&rd=6&SNode=S0",
+    certificateEventId: null
+  },
+  {
+    id: 284,
+    name: "Prime Engage Jr. Chess Championship 2026 (Under - 16)",
+    code: "2026/AJCA/E-24",
+    startDate: "2026-11-22",
+    endDate: "2026-11-22",
+    place: "Ranchi",
+    category: "Other",
+    brochure: "https://jharkhandchess.in/pdf/Prime%20Engage%20Jr.%20Chess%20Championship%202026.pdf",
+    result: "https://s3.chess-results.com/tnr1533304.aspx?lan=1&art=1&rd=6&SNode=S0",
     certificateEventId: null
   },
   {
