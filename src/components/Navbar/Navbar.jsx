@@ -41,15 +41,6 @@ const Navbar = () => {
           target: "_blank",
           link: "https://jharkhandchess.in/playerlist.aspx",
         },
-        {
-          text: "Payment for T-shirt (For National)",
-          target: "_blank",
-          link: "https://jharkhandchess.in/ajcatshirt.aspx",
-        },
-        {
-          text: "Other Payment",
-          link: "#",
-        },
       ],
     },
     {
@@ -74,104 +65,28 @@ const Navbar = () => {
       ],
     },
     {
-      title: "Tournament Entry",
-      isMultiTournament: true,
-      tournaments: [
-        // {
-        //   title: "2nd Jharkhand State Schools Rapid Open & Girls Chess Championship 2026",
-        //   items: [
-        //     {
-        //       text: "Brochure",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/pdf/2nd%20Jharkhand%20State%20%20Schools-3_.pdf",
-        //     },
-        //     {
-        //       text: "Registration",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationStateSchool.aspx",
-        //     },
-        //     {
-        //       text: "Players List",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationStateSchoolList.aspx",
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: "39th National Under-9 Open & Girls Chess Championship 2026",
-        //   items: [
-        //     {
-        //       text: "Brochure",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/pdf/National%20Under%209%20(open%20&%20girls).pdf",
-        //     },
-        //     {
-        //       text: "Payment for Accommodation, Boarding & Pick-Drop",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/nrb/",
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: "Under 7-13 Chess Championship 2026",
-        //   items: [
-        //     {
-        //       text: "Brochure",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/pdf/Under-7-13-chess-2026.pdf",
-        //     },
-        //     {
-        //       text: "Entry",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationu13.aspx",
-        //     },
-        //     {
-        //       text: "Players List",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationu13list.aspx",
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: "Rapid & Blitz Chess Championship - 2026",
-        //   items: [
-        //     {
-        //       text: "Brochure",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/pdf/RAPID_&_Blitz_CHESS_CHAMPIONSHIP_2026.pdf",
-        //     },
-        //     {
-        //       text: "Entry",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationrb.aspx",
-        //     },
-        //     {
-        //       text: "Players List",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationrblist.aspx",
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: "Under 15 Chess Championship 2026",
-        //   items: [
-        //     {
-        //       text: "Brochure",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/pdf/SUB-JUNIOR(UNDER-15).pdf",
-        //     },
-        //     {
-        //       text: "Entry",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationu15.aspx",
-        //     },
-        //     {
-        //       text: "Players List",
-        //       target: "_blank",
-        //       link: "https://jharkhandchess.in/registrationu15list.aspx",
-        //     },
-        //   ],
-        // },
+      title: "Payments",
+      items: [
+        {
+          text: "Tournament Entry",
+          link: "#",
+          inactive: true,
+        },
+        {
+          text: "AJCA T-SHIRT Payment",
+          target: "_blank",
+          link: "https://jharkhandchess.in/ajcatshirt.aspx",
+        },
+        {
+          text: "Bid Form Payment",
+          link: "#",
+          inactive: true,
+        },
+        {
+          text: "Other Payments",
+          link: "#",
+          inactive: true,
+        },
       ],
     },
   ];
@@ -211,7 +126,16 @@ const Navbar = () => {
                   <div className="absolute hidden group-hover:block top-full left-0 bg-[#E1DBD8] min-w-[330px] rounded-xl shadow-lg py-3 space-y-2 transition-all duration-300 origin-top transform opacity-0 group-hover:opacity-100 group-hover:translate-y-0 -translate-y-2">
                     {!dropdown.isMultiTournament ? (
                       dropdown.items.map((item) =>
-                        item?.target === "_blank" ? (
+                        item.inactive ? (
+                          <a
+                            key={item.text}
+                            href="#"
+                            onClick={(e) => e.preventDefault()}
+                            className="block px-4 py-2 text-[#2C1B16] hover:bg-[#2C1B16] hover:text-[#E1DBD8] transition-colors duration-150 cursor-pointer"
+                          >
+                            {item.text}
+                          </a>
+                        ) : item?.target === "_blank" ? (
                           <a
                             key={item.text}
                             href={item.link}
@@ -274,15 +198,6 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* AJCA T-shirt standalone link */}
-            <a
-              href="https://jharkhandchess.in/ajcatshirt.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors"
-            >
-              AJCA T-shirt Order
-            </a>
           </div>
         </div>
 
@@ -349,7 +264,19 @@ const Navbar = () => {
                 <div className="ml-3 space-y-2 border-l-2 border-[#2C1B16] pl-3 transition-all duration-300 ease-in-out">
                   {!dropdown.isMultiTournament ? (
                     dropdown.items.map((item) =>
-                      item?.target === "_blank" ? (
+                      item.inactive ? (
+                        <a
+                          key={item.text}
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            closeMenu();
+                          }}
+                          className="block text-[#2C1B16] text-lg py-1.5 hover:pl-2 transition-all duration-200 cursor-pointer"
+                        >
+                          {item.text}
+                        </a>
+                      ) : item?.target === "_blank" ? (
                         <a
                           key={item.text}
                           href={item.link}
@@ -418,32 +345,6 @@ const Navbar = () => {
               )}
             </div>
           ))}
-
-          {/* AJCA T-shirt standalone link for mobile */}
-          <div className="mb-4">
-            <a
-              href="https://jharkhandchess.in/ajcatshirt.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
-              className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 flex justify-between items-center hover:pl-2 transition-all duration-200"
-            >
-              AJCA T-shirt Order
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
-          </div>
 
           <Link
             to="/contact"
