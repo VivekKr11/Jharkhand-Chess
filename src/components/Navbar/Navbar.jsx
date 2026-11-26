@@ -198,6 +198,13 @@ const Navbar = () => {
               </div>
             ))}
 
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="text-[#2C1B16] font-bold text-lg hover:text-[#E1DBD8] transition-colors cursor-pointer"
+            >
+              Gallery
+            </a>
           </div>
         </div>
 
@@ -345,6 +352,19 @@ const Navbar = () => {
               )}
             </div>
           ))}
+
+          <div className="mb-4">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                closeMenu();
+              }}
+              className="w-full text-left text-[#2C1B16] font-bold text-lg py-2 block cursor-pointer"
+            >
+              Gallery
+            </a>
+          </div>
 
           <Link
             to="/contact"
