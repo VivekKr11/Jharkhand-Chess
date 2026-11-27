@@ -127,19 +127,19 @@ const ContactUs = () => {
                 <MapPin className="w-7 h-7" />
               </div>
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#815b4f] mb-1">
-                Registered Office
+                Communication &amp; Postal Address
               </span>
               <h2 className="font-cinzel font-bold text-xl text-[#2c1a0e] mb-2">
                 Visit Us
               </h2>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-xs">
-                Aries House, 1st Floor, Purulia Road, Opposite Hotel Anjali Kantatoli, Ranchi, Jharkhand 835103
+                Birla Campus, Vill.- Ara, P.O.- Mahilong, Ranchi-Purulia Highway, Ranchi, Jharkhand – 835103, India
               </p>
             </div>
 
             <div className="pt-5 mt-6 border-t border-[#f2ece2]">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Aries+House+Purulia+Road+Opposite+Hotel+Anjali+Kantatoli+Ranchi+Jharkhand+835103"
+                href="https://www.google.com/maps/search/?api=1&query=Birla+Campus+Ara+Mahilong+Ranchi+Purulia+Highway+Ranchi+Jharkhand+835103"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-[#2c1a0e] hover:bg-[#d4a853] text-white hover:text-[#2c1a0e] font-semibold text-xs uppercase tracking-wider transition-colors duration-200"
@@ -187,16 +187,17 @@ const ContactUs = () => {
             </div>
           </div>
 
-          {/* Address & Landmark Info Banner */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-            <div className="bg-[#faf6f0] rounded-2xl p-6 border border-[#ece3d4] flex flex-col justify-between">
-              <div className="space-y-5">
+          {/* Addresses & Maps */}
+          <div className="mt-8 space-y-6">
+            {/* Row 1: Registered Address + Map */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+              <div className="bg-[#faf6f0] rounded-2xl p-6 border border-[#ece3d4] flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-2.5 text-[#2c1a0e] font-bold text-sm mb-2.5">
+                  <div className="flex items-center gap-2.5 text-[#2c1a0e] font-bold text-sm mb-3">
                     <Building className="w-4 h-4 text-[#d4a853]" />
                     <span>Registered Address</span>
                   </div>
-                  <p className="font-cinzel font-bold text-base text-[#2c1a0e] mb-1.5">
+                  <p className="font-cinzel font-bold text-base text-[#2c1a0e] mb-2">
                     All Jharkhand Chess Association (AJCA)
                   </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
@@ -208,37 +209,66 @@ const ContactUs = () => {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#e8ded1]">
-                  <div className="flex items-center gap-2.5 text-[#2c1a0e] font-bold text-sm mb-2">
-                    <Mail className="w-4 h-4 text-[#d4a853]" />
-                    <span>Communication &amp; Postal Address</span>
-                  </div>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    Birla Campus, Vill.- Ara, P.O.- Mahilong,
-                    <br />
-                    Ranchi-Purulia Highway, Ranchi, Jharkhand – 835103, India
-                  </p>
+                <div className="mt-6 pt-4 border-t border-[#e8ded1] flex items-center justify-between text-xs text-[#815b4f]">
+                  <span>Landmark: Opposite Hotel Anjali</span>
+                  <span className="font-semibold text-[#2c1a0e]">Kantatoli, Ranchi</span>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#e8ded1] flex items-center justify-between text-xs text-[#815b4f]">
-                <span>Landmark: Opposite Hotel Anjali</span>
-                <span className="font-semibold text-[#2c1a0e]">Kantatoli, Ranchi</span>
+              {/* Google Maps Embed: Registered Address */}
+              <div className="rounded-2xl overflow-hidden border border-[#e8ded1] shadow-sm min-h-[220px] bg-[#faf6f0]">
+                <iframe
+                  title="AJCA Registered Office Location"
+                  src="https://maps.google.com/maps?q=Hotel+Anjali+Kantatoli+Purulia+Road+Ranchi+Jharkhand+835103&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "220px" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
 
-            {/* Google Maps Embed iframe */}
-            <div className="rounded-2xl overflow-hidden border border-[#e8ded1] shadow-sm min-h-[220px] bg-[#faf6f0]">
-              <iframe
-                title="AJCA Office Location"
-                src="https://maps.google.com/maps?q=Hotel+Anjali+Kantatoli+Purulia+Road+Ranchi+Jharkhand+835103&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: "220px" }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            {/* Row 2: Communication & Postal Address + Map */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+              <div className="bg-[#faf6f0] rounded-2xl p-6 border border-[#ece3d4] flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2.5 text-[#2c1a0e] font-bold text-sm mb-3">
+                    <Mail className="w-4 h-4 text-[#d4a853]" />
+                    <span>Communication &amp; Postal Address</span>
+                  </div>
+                  <p className="font-cinzel font-bold text-base text-[#2c1a0e] mb-2">
+                    All Jharkhand Chess Association (AJCA)
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    Birla Campus, Vill.- Ara, P.O.- Mahilong,
+                    <br />
+                    Ranchi-Purulia Highway,
+                    <br />
+                    Ranchi, Jharkhand – 835103, India
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-[#e8ded1] flex items-center justify-between text-xs text-[#815b4f]">
+                  <span>Campus: Birla Campus, Ara</span>
+                  <span className="font-semibold text-[#2c1a0e]">Mahilong, Ranchi</span>
+                </div>
+              </div>
+
+              {/* Google Maps Embed: Communication & Postal Address */}
+              <div className="rounded-2xl overflow-hidden border border-[#e8ded1] shadow-sm min-h-[220px] bg-[#faf6f0]">
+                <iframe
+                  title="AJCA Communication & Postal Address Location"
+                  src="https://maps.google.com/maps?q=Birla+Campus+Ara+Mahilong+Ranchi+Purulia+Highway+Ranchi+Jharkhand+835103&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "220px" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </div>
