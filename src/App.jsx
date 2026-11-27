@@ -11,6 +11,7 @@ import Certificate from "./pages/Certificate";
 import EventCalendar2026 from "./pages/Events/Eventcalendar2026";
 import OfficeBearers from "./pages/OfficeBearers";
 import Arbiters from "./pages/Arbiters";
+import Coaches from "./pages/Coaches";
 import AffiliatedUnits from "./pages/AffiliatedUnits";
 import Downloads from "./pages/Downloads";
 import ContactUs from "./pages/ContactUs";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/office-bearers" element={<OfficeBearers />} />
         <Route path="/officebearers" element={<OfficeBearers />} />
         <Route path="/arbiters" element={<Arbiters />} />
+        <Route path="/coaches" element={<Coaches />} />
         <Route path="/affiliated-units" element={<AffiliatedUnits />} />
         <Route path="/affiliatedunits" element={<AffiliatedUnits />} />
         <Route path="/downloads" element={<Downloads />} />

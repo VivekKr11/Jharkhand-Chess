@@ -57,7 +57,7 @@ const Navbar = () => {
         { text: "Affiliated Units", link: "/affiliated-units" },
         { text: "Committees", link: "#" },
         { text: "Arbiters", link: "/arbiters" },
-        { text: "Coaches", link: "#" },
+        { text: "Coaches", link: "/coaches" },
         { text: "Download", link: "/downloads" },
         { text: "Certificates", link: "/certificates" },
         { text: "Privacy Policy", link: "/privacyPolicy" },
